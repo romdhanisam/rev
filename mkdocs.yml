@@ -1,24 +1,42 @@
 site_name: Wording
 site_author: Samir Romdhani
 site_url: "https://romdhanisam.github.io/rev/"
-#repo_url: "https://github.com/romdhanisam/portfolio/"
-#repo_name: "romdhanisam/portfolio"
+repo_url: "https://github.com/romdhanisam/rev/"
+repo_name: "romdhanisam/rev"
 docs_dir: docs
 site_dir: public
 
 nav:
   - About: index.md
-  - Articles: articles.md
+  - OOP: oop.md
+  - Java: java.md
+  - Design - Pattern: patterns.md
+  - Spring: spring.md
+  - BDD: bdd.md
+  - Angular: angular.md
+  - Note - Arch: arch.md
+  - DevOps: devops.md
+  - Microprofile-: Microprofile-SOA-microservice-JavaEE.md
+  - Kafka-: kafka-.md
+#  - Articles: articles.md
 
 theme:
   name: material
-  locale: en
+  locale: fr
   favicon: https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/materialformkdocs.svg
   custom_dir: docs/overrides
   features:
     - toc.integrate
     - navigation.tabs
     - navigation.footer
+#    - navigation.instant
+#    - navigation.instant.progress
+#    - navigation.tracking
+#    - navigation.sections
+    - navigation.expand
+#    - navigation.prune
+    - search.suggest      # Enable suggestions
+    - search.highlight    # Highlight search terms
 
 plugins:
   - neoteroi.mkdocsoad:
@@ -29,22 +47,16 @@ plugins:
       docs_structure: suffix
       default_language: fr
       languages:
-        - locale: en
-          default: true
-          name: English
-          build: true
         - locale: fr
+          default: true
           name: Français
           build: true
-          site_name: "Samir Romdhani | Ingénieur d'études et développement"
+        - locale: en
+          name: English
+          build: true
+          site_name: "Wording"
           nav_translations:
-            About: Profil
-            Work experience: Expériences
-            Education: Éducation
-            Contributions: Réalisations
-            Projects: Projets
-            Certifications: Certifications
-            Skills: Compétences
+            Articles: Articles
 
 markdown_extensions:
   - admonition
@@ -59,6 +71,11 @@ markdown_extensions:
   - pymdownx.snippets
   - md_in_html
   - tables
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
   - pymdownx.highlight:
       anchor_linenums: true
       linenums: true
@@ -75,3 +92,7 @@ extra_css:
   - assets/css/neoteroi-mkdocs.css
 extra_javascript:
   - assets/js/extra.js
+#extra:
+#  status:
+#    draft: "⚠️ Draft"
+#    done: "✅"
