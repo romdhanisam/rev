@@ -1,36 +1,44 @@
 ### Transaction
 !!! note annotate ""
 
-    Une transaction est {++une séquence d'accès (lectures ou mises à jour)++} à la base de données qui satisfait 4 propriétés : ACID
-    > Les propriétés ACID (atomicité, cohérence, isolation et durabilité) c'est un ensemble de propriétés qui garantissent qu'une transaction est exécutée de façon fiable.
+    - [x] **Une transaction** est ==une séquence d'accès (lectures ou mises à jour)== à la base de données 
+      qui satisfait 4 propriétés : ACID
+    > Les propriétés ACID (**a**tomicité, **c**ohérence, **i**solation et **d**urabilité)<br/>
+    > C'est un ensemble de propriétés qui ^^garantissent qu'une transaction est exécutée de façon **fiable**.^^
 
 !!! note annotate ""
 
     1. **A**tomicité → tout ou rien (la transaction s’exécute entièrement ou est annulée). 
-        - Toutes les opérations dans une transaction ==sont appliquées ou annulées ensemble==.
+        - Toutes les opérations dans une transaction ==**sont appliquées** ou annulées ensemble==.
     2. **C**ohérence → 
         - Assure que ==la base reste dans un état correct même en cas d’erreur==.
         - Elle maintient l’intégrité des données (les règles sont respectées).
-    3. **I**solation → ==pas d’interférence entre transactions==, les transactions simultanées
-          ne se perturbent pas entre elles. 
+    3. **I**solation → 
+        - ==Pas d’interférence entre transactions==, ^^les transactions simultanées
+          ne se perturbent pas entre elles^^
         - Toute transaction doit s'exécuter comme si elle était la seule sur le système.
-    4. **D**urabilité → une fois validée (commit), la transaction est définitivement enregistrée, même en cas de panne.
+    4. **D**urabilité → 
+        - Une transaction une fois validée (`commit`), 
+          elle est ==définitivement enregistrée==, même en cas de panne.
 
 ### Isolation
 !!! note annotate ""
 
-    - Le niveau d’isolation {++définit comment une transaction voit ou impacte les données modifiées par d’autres transactions concurrentes++}
-    - L’isolation des transactions **détermine dans quelle mesure les modifications apportées à une transaction sont visibles dans d'autres transactions** et par d'autres utilisateurs du système.
-        - Un niveau d'isolation **élevé** signifie que les modifications d'une transaction **ne sont pas visibles**
-        - Un niveau d'isolation **faible** signifie que les modifications d'une transaction peuvent «se glisser» dans les sélections exécutées dans le cadre d'une autre transaction.
+    - [x] **Le niveau d’isolation** ==définit comment une transaction **voit ou impacte** les données modifiées
+      par d’autres transactions concurrentes.==
+    - [ ] L’isolation des transactions **détermine dans quelle mesure les modifications apportées 
+       à une transaction sont visibles dans d'autres transactions** et par d'autres utilisateurs du système.
+        - [x] Un niveau d'isolation **élevé** signifie que les modifications d'une transaction **ne sont pas visibles**
+        - [x] Un niveau d'isolation **faible** signifie que les modifications d'une transaction 
+           peuvent «se glisser» dans les sélections exécutées dans le cadre d'une autre transaction.
 
 ### Propagation
 !!! note annotate ""
 
-    - La propagation définit {++comment une méthode transactionnelle se comporte quand elle est appelée à l’intérieur d’une autre transaction++}.
-    - C’est la capacité à maintenir l'intégrité des transactions lorsque plusieurs transactions sont exécutées simultanément 
-    dans un contexte de transaction unique.
-
+    - [x] **La propagation** définit ==comment une méthode transactionnelle **se comporte** 
+       quand elle est appelée à l’intérieur d’une autre transaction.==
+    - [x] C’est la capacité à maintenir l'intégrité des transactions, lorsque plusieurs transactions 
+      sont exécutées simultanément dans un contexte de transaction unique.
 
 ### Niveau d'isolation
 
@@ -45,70 +53,82 @@
         - SERIALIZABLE: empêche les anomalies concurrentes (simule une exécution séquentielle).
         - SERIALIZABLE: **Simule une exécution séquentielle des transactions.**
     - Tous, sauf le niveau SERIALIZABLE, sont soumis à des anomalies de données
+    - Par défaut
+        - [x] **MySQL** utilise **REPEATABLE READ**
+        - [x] **PostgreSQL**, **H2** et **Oracle** utilisent **READ COMMITTED**
 
-    ---
-    - **Dirty read** → lorsqu’une transaction lit une donnée non validée par une autre transaction.
-    - **Non-repeatable read** → Lorsqu’une transaction lit la même ligne mais obtient des résultats différents car une autre transaction a modifié/validé cette donnée entre-temps.
-    - **Phantom read** → Lorsqu’une transaction lit un ensemble de données mais le résultat est différent car de nouvelles lignes apparaissent/disparaissent entre-temps.
+####  Isolation | Anomalies
+
+!!! note annotate "Isolation | Anomalies"
+
+    - [x] **Dirty read** → lorsqu’une transaction ==lit une donnée **non validée** par une autre transaction.==
+    - [x] **Non-repeatable read** → se produit lorsqu’une transaction ==lit deux fois la même donnée==,<br/>
+        mais ==obtient des valeurs différentes entre les deux lectures==, parce qu’une autre transaction l’a modifiée entre-temps.
+    - [x] **Phantom read** → Lorsqu’une transaction ==lit un ensemble de données== <br/>
+        mais le résultat est différent car de nouvelles lignes apparaissent/disparaissent entre-temps.
+
+    - **Qu’est-ce qu’un dirty read (lecture sale) ?**
+        - Un dirty read se produit lorsqu’une transaction lit une donnée 
+           qui a été modifiée par une autre transaction non encore validée (non commitée).
+        - Si cette autre transaction fait un rollback, la première transaction aura utilisé une donnée invalide.
+        
+            > Exemple :
+        
+            > 1. T1 modifie le solde d’un compte (solde = 500 → 300), mais ne fait pas encore de commit.
+        
+            > 2. T2 lit le solde = 300.
+        
+            > 3. T1 fait rollback → le solde réel est toujours 500, mais T2 a pris 
+            > une mauvaise décision en pensant que c’était 300.
+    - **Non-repeatable read** (lecture non reproductible)
+        - Est un phénomène d’anomalie de concurrence qui se produit lorsqu’une transaction lit deux fois la même donnée, 
+          mais obtient des valeurs différentes entre les deux lectures — parce qu’une autre transaction l’a modifiée entre-temps.
+        - Une transaction lit une donnée deux fois, 
+           mais obtient des résultats différents car une autre transaction a modifié/validé cette donnée entre-temps.
     
-    ---
-    #### Qu’est-ce qu’un dirty read (lecture sale) ?
-    - Un dirty read se produit lorsqu’une transaction lit une donnée qui a été modifiée par une autre transaction non encore validée (non commitée).
-    - Si cette autre transaction fait un rollback, la première transaction aura utilisé une donnée invalide.
+            > Exemple :
     
-        > Exemple :
+            > T1 lit le solde d’un compte = 500.
     
-        > 1. T1 modifie le solde d’un compte (solde = 500 → 300), mais ne fait pas encore de commit.
+            > T2 modifie ce solde à 300 et fait **commit**.
     
-        > 2. T2 lit le solde = 300.
+            > T1 relit le même compte = 300.
     
-        > 3. T1 fait rollback → le solde réel est toujours 500, mais T2 a pris une mauvaise décision en pensant que c’était 300.
+            > Résultat : T1 a lu 500 puis 300 pour le même enregistrement, dans la même transaction.
 
-    ---
-    #### Non-repeatable read (lecture non reproductible)
-    - Est un phénomène d’anomalie de concurrence qui se produit lorsqu’une transaction lit deux fois la même donnée, mais obtient des valeurs différentes entre les deux lectures — parce qu’une autre transaction l’a modifiée entre-temps.
-    - Une transaction lit une donnée deux fois, mais obtient des résultats différents car une autre transaction a modifié/validé cette donnée entre-temps.
-
-        > Exemple :
-
-        > T1 lit le solde d’un compte = 500.
-
-        > T2 modifie ce solde à 300 et fait **commit**.
-
-        > T1 relit le même compte = 300.
-
-        > Résultat : T1 a lu 500 puis 300 pour le même enregistrement, dans la même transaction.
-
-### Hibernate-JPA
+### Hibernate | JPA
 
 #### Hibernate
 !!! note annotate "Hibernate"
 
-    - Un framework ORM est conçu par Red Hat. 
-    - Il a été initialement publié le 23 mai 2007.
-    - Il prend en charge une JVM multiplateforme et est écrit en Java.
+    - [] Un framework ORM est conçu par Red Hat. 
+    - [] Il a été initialement publié le 23 mai 2007.
+    - [] Il prend en charge une JVM multiplateforme et est écrit en Java.
     ---
-    - La principale caractéristique d'Hibernate est de ==mapper les classes Java aux tables de la base de données.==
-    - L'avantage est clairement de masquer la logique relationnelle aux développeurs,
+    - [x] Framework Java qui ==automatise le mapping entre objets Java et tables SQL==, et utilise **JDBC** (API java)
+        pour communiquer avec le **SGBD** (logiciel qui stocke et gère les données )
+    - [x] La principale caractéristique d'Hibernate est de ==mapper les classes Java aux tables de la base de données.==
+    - [ ] L'avantage est clairement de masquer la logique relationnelle aux développeurs,
       d'interconnecter facilement des objets avec une base de données 'business' existante.
-    - Quoi qu'il arrive il faut faire un pont entre le monde relationnel de la base de données et le monde objet de Java.
-    - Fonctionnalités clés d'Hibernate :
-        - Hibernate est une implémentation des directives JPA.
-        - Il aide à ==mapper les types de données Java aux types de données SQL.==
+        - [ ] Quoi qu'il arrive il faut faire un pont entre le monde relationnel de la base de données et le monde objet de Java.
+    - [ ] Fonctionnalités clés d'Hibernate :
+        - [x] Hibernate est une implémentation des directives **JPA**.
+        - [x] Il aide à ==mapper les types de données Java aux types de données **SQL**.==
 
 #### JPA
 !!! note annotate "JPA"
 
-    - Il s'agit ^^d'une spécification Java^^ qui donne des fonctionnalités et des normes aux outils ORM. 
-    - Un standard pour gérer la persistance dans Java
-    - Il est utilisé pour examiner, contrôler et stocker les données entre les objets Java 
-      et les bases de données relationnelles.
-
+    - [x] Il s'agit ^^d'une spécification Java^^ qui donne des fonctionnalités et des normes aux outils ORM. 
+    - [x] Un standard pour gérer la persistance dans Java
+    - [x] Il est utilisé pour examiner, contrôler et stocker (gérer) les données entre les objets Java 
+        et les bases de données relationnelles.
+#### Hibernate vs JPA
 !!! note annotate "Différence entre JPA et Hibernate "
 
-    La principale différence entre Hibernate et JPA est que Hibernate
-    est un framework, tandis que JPA est une spécification d'API.<br/>
-    Hibernate est une implémentation du JPA.
+    - La principale différence entre Hibernate et JPA est que
+        - Hibernate est un framework.
+        - JPA est une spécification d'API.
+        - Hibernate est une implémentation du JPA.
     
     | JPA           | Hibernate                                                                      |
     | ------------- |:-------------:                                                                 |
@@ -131,9 +151,7 @@
 !!! note annotate "Le cache d'entités JPA "
 
     - JPA mentionne la possibilité d’un cache, mais ne fournit pas d’implémentation concrète.
-
     ---
-
     1. **Cache de premier niveau (L1)** Le cache de premier niveau est rattaché à l'objet **EntityManager**, 
        il s'agit en fait du « persistence context » qui lui est associé.
     2. **Cache de deuxième niveau (L2)** En dessous de ce cache placé sous la direction des `EntityManagers`
@@ -163,14 +181,14 @@
 
     1. **Optimisation du cache**
         - Premier niveau (obligatoire, session) déjà utilisé par défaut par Hibernate.
-            - Le cache de premier niveau est propre à la session et disparaît à sa fermeture. 
+            - [x] ==Le cache de premier niveau est propre à la **session**== et disparaît à sa fermeture. 
             - Hibernate garde les entités dans le cache de `session` (`transactionnel`).
-            - [x] Le cache de premier niveau permet d'éviter les accès répétés à la même entité dans la même session.
+            - [x] ==Le cache de premier niveau permet d'éviter les accès répétés à la même entité dans la même session==
         - Deuxième niveau (optionnel)
-            - Active un cache partagé entre sessions
-            - [x] Le cache de second niveau fournit une mémoire partagée pour les entités et collections ^^entre sessions^^,
-                - Permet de réduire les lectures SQL 
-                - Éviter des requêtes SQL répétitives et améliorant la performance globale.
+            - [ ] Active ==un cache partagé entre sessions==
+            - [x] Le cache de second niveau ==fournit une mémoire partagée pour les entités et collections **entre sessions**==,
+                - Permet de **réduire les lectures SQL** 
+                - **Éviter des requêtes SQL répétitives** et **améliorant la performance globale**.
     2. **FETCH JOIN** pour améliorer les performances d’Hibernate
         - Permet de charger les entités principales et leurs associations en une seule requête SQL, <br/>
           On évite ainsi le problème classique du N+1, où Hibernate exécute une requête par entité associée
@@ -209,9 +227,9 @@
 
 ##### Connection pooling
 
-En plus d'optimiser le lazy loading, les fetch joins, et le cache, <br/>
-utiliser un connection pool (HikariCP…) permet de ==réduire le coût de création des connexions==
-et améliorer la performance globale de l’application
+- En plus d'optimiser le lazy loading, les fetch joins, et le cache, <br/>
+    utiliser un connection pool (HikariCP…) permet de ==réduire le coût de création des connexions==
+    et améliorer la performance globale de l’application
 
 !!! note annotate "Connection pooling"
 
@@ -220,25 +238,20 @@ et améliorer la performance globale de l’application
       il s’appuie sur un `DataSource` ou `un pool de connexions` (HikariCP.. ).
     - Cela complète les optimisations Hibernate: même si tes requêtes sont optimisées,
       sans pool, chaque appel ouvre/ferme une connexion → perte de performance.
-
-    _Principe :_
-
-      - Établir une connexion à une base de données est une opération coûteuse (temps + ressources).
-      - Au lieu de créer et fermer une connexion à chaque requête, on met en place ==un pool== {++(réservoir)++} 
-        de connexions déjà ouvertes et prêtes à l’emploi.
-      - Dans Spring Boot, l’outil **HikariCP** est une implémentation performante très utilisée.
-    
-    _But_ : Diminuer le temps de réponse et la charge serveur.
-
-    _Fonctionnement :_
-
-      - {++Lorsqu’une application a besoin d’accéder à la BDD, elle emprunte une connexion disponible dans le pool++}
-      - Une fois la requête terminée, la connexion n’est pas détruite, mais rendue au pool pour être réutilisée.
-      - Le pool peut gérer un nombre maximum de connexions pour éviter la surcharge.
-
+    - _Principe :_
+          - Établir une connexion à une base de données est une opération coûteuse (temps + ressources).
+          - Au lieu de créer et fermer une connexion à chaque requête, on met en place ==un pool (réservoir)== 
+            de connexions déjà ouvertes et prêtes à l’emploi.
+          - Dans Spring Boot, l’outil **HikariCP** est une implémentation performante très utilisée.
+    - _But_ :
+        - Diminuer le temps de réponse et la charge serveur.
+    - _Fonctionnement :_
+          - ==Lorsqu’une application a besoin d’accéder à la BDD,
+            elle emprunte une connexion disponible dans le pool==
+          - Une fois la requête terminée, la connexion n’est pas détruite, mais rendue au pool pour être réutilisée.
+          - Le pool peut gérer un nombre maximum de connexions pour éviter la surcharge.
 
 ### MySQL
-
 #### JDBC - SQL - DBMS (SGBD)
 
 !!! note annotate "Hibernate - JDBC - SQL - DBMS (SGBD)"

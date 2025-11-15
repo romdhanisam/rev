@@ -10,15 +10,21 @@ nav:
   - About: index.md
   - OOP: oop.md
   - Java: java.md
-  - Design - Pattern: patterns.md
+  - Design - Pattern:
+      - patterns.md
+      - patterns_annexe.md
   - Spring: spring.md
   - BDD: bdd.md
+  - Java-Spring-BDD: java-spring-words.md
   - Angular: angular.md
-  - Note - Arch: arch.md
+  - Architecture: arch.md
   - DevOps: devops.md
-  - Microprofile-: Microprofile-SOA-microservice-JavaEE.md
   - Kafka-: kafka-.md
+  - Notes-: note.md
+#  - Microprofile-: Microprofile-SOA-microservice-JavaEE.md
+#  - Réseaux-: reseau.md
 #  - Articles: articles.md
+#  - Embedding a PDF file: files/speach10m.pdf
 
 theme:
   name: material
@@ -37,6 +43,8 @@ theme:
 #    - navigation.prune
     - search.suggest      # Enable suggestions
     - search.highlight    # Highlight search terms
+  icon:
+    annotation: material/arrow-right-circle
 
 plugins:
   - neoteroi.mkdocsoad:
@@ -86,6 +94,28 @@ markdown_extensions:
       check_paths: true
   - pymdownx.tasklist:
       custom_checkbox: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      linenums: true
+      linenums_style: pymdownx.inline
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+#  - pymdownx.pathconverter:
+#      base_path: 'https://romdhanisam.github.io/rev' # default: ''
+#      relative_path: '' # default ''
+#      absolute: true # default: false
+#      tags: 'a script img link object embed'
+
 extra_css:
   - assets/css/extra.css
   - assets/css/neoteroi-cards.css

@@ -1,3 +1,4 @@
+
 ### Architecture distribuée
 !!! note annotate "Architecture distribuée"
 
@@ -56,22 +57,50 @@
 
     4. ##### ^^Microservices^^
 
-        - ^^Une approche de développement^^ qui consiste {++ à décomposer les applications en éléments les plus simples, 
+        - [x] L'architecture microservice ==décrit une manière de concevoir une application comme une suite de service
+          hautement disponible==, **autonomes** at ==faibelement couplées==,
+          ^^que l'on peut developper, versionner, déployer et scaler indépondement^^
+        - [x] ^^Une approche de développement^^ qui consiste {++ à décomposer les applications en éléments les plus simples, 
           indépendants les uns des autres++}. Contrairement à une approche monolithique classique,
           selon laquelle tous les composants forment une entité indissociable.
-        - ^^Un microservice est une architecture^^ pour les applications {++qui sépare une application en plusieurs petits services Web autonomes++}.
-        - Le concept de base du microservice, c'est une application qui ne fait qu'une chose, mais qui la fait de manière optimale:
+        - [x] ^^Un microservice est une architecture^^ pour les applications {++qui sépare une application en plusieurs petits services Web autonomes++}.
+        - [x] Le concept de base du microservice, c'est une application qui ne fait qu'une chose, mais qui la fait de manière optimale:
         - <h6>Les microservices désignent à la fois: Une architecture Une approche de développement</h6>
-    
-            > Avantages:
-    
-            - Par rapport aux applications monolithiques, les microservices sont beaucoup plus faciles à créer, tester, déployer et mettre en jeu
-                - Il est facilement remplaçable pour offrir une évolutivité à l’application.
-                - Il est déployé indépendamment.
-                - Son développement est indépendant.
+        - **Avantages**:
+            - Par rapport aux applications monolithiques, les microservices sont beaucoup 
+              plus faciles à créer, tester, déployer et mettre en jeu
+                - Il est facilement **remplaçable** pour offrir une évolutivité à l’application.
+                - Il est **déployé indépendamment**.
+                - Son **développement est indépendant**.
             - Les microservices sont plus robustes et permettent une mise à l'échelle verticale et horizontale plus dynamique.
             - Robustes: solides, résistants, etc. : les microservices sont plus résistants aux pannes que les monolithes.
             - Une architecture de microservice complète est un réseau interconnecté de services isolés.
+
+##### ^^Event-Driven Architecture^^
+
+- Un modèle d'architecture ==où les systèmes **réagissent** à des événements en temps réel.==
+    - [x] **réagissent** c-à-d publient, consomment ou acheminent des événements.
+    - Un modèle d'architecture moderne créé à partir de petits services découplés qui **réagissent** à des événements en temps réel
+
+- **`Un événement`** représente ^^un changement d'état ou une mise à jour^^. Par exemple : commande payée, ou utilisateur créé 
+    - Un événement transmet (envoi) un état à un instant T (le numéro de transaction, le montant et le numéro de commande
+
+1. ^^Les différents modèles pour implémenter une event driven architecture^^
+    - L'architecture Event-Driven (orientée événements) peut utiliser le modèle de **`Pub/sub`** ou le modèle de **`Event streaming`**.
+        1. **`Pub/sub`** : lorsqu'un événement est publié, le router va le communiquer 
+            à tous les consumers qui sont abonnés à cet événement. 
+            Si un nouveau consumer s'abonne à un événement, il n'a pas accès aux événements passés. 
+        2. **`Event streaming`** : les événements sont enregistrés dans un journal dans l'ordre chronologique. 
+            Un client peut lire n'importe quelle partie du flux à n'importe quel moment. 
+            Cela signifie aussi qu'un client peut s'abonner à tout moment et avoir accès aux événements passés.
+2. ^^Caractéristiques de l’EDA^^
+    1. **Découplage** des composants :
+        - Les services communiquent via des événements sans dépendances directes. 
+        ^^ce qui leur permet d'être modifiés et déployés de manière indépendante.^^
+    2. **Scalabilité** et résilience :
+        - Les systèmes peuvent gérer une grande quantité d’événements simultanés.
+    3. Traitement **asynchrone** :
+        - Les services ne nécessitent pas de réponse immédiate, améliorant la fluidité.
 
 ##### SOA vs Microservices
 !!! info annotate "SOA vs Microservices"
@@ -108,6 +137,26 @@
         - Les requêtes adressées aux systèmes distribués n'accèdent généralement pas à l'ensemble des nœuds du système, mais à un ensemble partiel ou à un chemin à travers les nœuds.
         - Le traçage distribué met en lumière les chemins couramment utilisés dans un système distribué et permet aux équipes d'analyser et de surveiller ces chemins.
         - Le traçage distribué est installé sur chaque nœud du système et permet ensuite aux équipes **d'interroger** le système **pour obtenir des informations** sur **l'état du nœud et les performances des requêtes**.
+
+
+#### Comment techniquement faire le traçage distribué dans Kafka ?
+!!! note annotate "traçage distribué dans Kafka"
+
+    - Ajouter des identifiants de trace dans les messages
+    - Intégration avec un système de traçage 
+        - Kafka ne fait pas de traçage distribué natif → on utilise des outils de tracing :
+            - OpenTelemetry (standard open-source)
+    - Dans Kafka, **le traçage distribué** se fait en ajoutant un **traceId** dans les headers des messages, 
+        en instrumentant producteurs et consommateurs avec un outil comme OpenTelemetry ou Jaeger, 
+        et en collectant tous les **spans** pour reconstruire le chemin complet des messages 
+        dans le système distribué.
+        - L’instrumentation des producteurs et consommateurs consiste à créer des spans 
+                et à propager les traceIds dans les headers des messages, pour suivre 
+                le chemin complet d’un message dans Kafka.
+
+    ```shell
+    Producteur --[traceId]--> Broker Kafka --[traceId]--> Consommateur --> Service downstream
+    ```
 
 ### Cloud Native
 !!! note annotate ""

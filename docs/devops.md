@@ -11,7 +11,7 @@
     - Git permet une grande flexibilité dans la manière dont les développeurs collaborent sur un projet
 
 
-### Docker
+### Docker 🐳
 !!! note annotate "Docker"
 
     - Déf 1: ^^Une plateforme^^ qui permet de créer, déployer et exécuter des applications dans des conteneurs isolés.
@@ -54,6 +54,19 @@
             - Le conteneur est isolé pour ses processus, son système de fichiers, et son réseau virtuel,
               mais ^^tout accès au matériel passe par le noyau du système.^^
 
+
+##### 🐳 [Devops|Docker]
+
+![img.png](assets/images/DOCKER.png)
+
+Les foundations existent déjà bien avant :
+1. 𝐍𝐚𝐦𝐞𝐬𝐩𝐚𝐜𝐞𝐬 (PID, NET, MNT, UTS, IPC) pour isoler les processus 
+2. 𝐂𝐠𝐫𝐨𝐮𝐩𝐬 pour contrôler CPU, RAM et I/O 
+3. 𝐂𝐡𝐫𝐨𝐨𝐭 + 𝐨𝐯𝐞𝐫𝐥𝐚𝐲 filesystems pour gérer le système de fichiers
+
+Aujourd'hui, que ce soit 𝐜𝐨𝐧𝐭𝐚𝐢𝐧𝐞𝐫𝐝, 𝐫𝐮𝐧𝐜, 𝐏𝐨𝐝𝐦𝐚𝐧 𝐨𝐮 𝐊𝐮𝐛𝐞𝐫𝐧𝐞𝐭𝐞𝐬, tous utilisent exactement les mêmes primitives Linux.
+
+---
 
 ### Docker Questions
 !!! note annotate ""

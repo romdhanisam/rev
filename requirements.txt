@@ -5,6 +5,7 @@ mkdocs>=1.5.2
 mkdocs-material>=9.6.23
 # 5.4.0
 mkdocs-material-extensions
+mkdocs-mermaid2-plugin
 neoteroi-mkdocs>1.0.3
 pymdown-extensions
 mkdocs-include-markdown-plugin
