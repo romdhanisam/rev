@@ -126,7 +126,7 @@ Il simplifie le développement par l'auto-configuration: son
 
         - `Spring Boot Actuator` correspond à une fonctionnalité de Spring Boot qui permet de monitorer et de manager notre programme pendant qu’il est en cours d’exécution.
 
-### Questions  ?
+#### Questions
 
 [//]: # (- spring test question)
 [//]: # (![img.png]&#40;https://pbs.twimg.com/media/G3ejXWvWIAAXfmb?format=jpg&name=medium&#41;)

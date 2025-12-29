@@ -141,8 +141,6 @@
       et exécuter des opérations CRUD dans un contexte de persistance. DataSource est bas niveau, EntityManager est haut niveau orienté objet.
 
 
-
-
 ___
 
 ___
@@ -150,49 +148,75 @@ ___
 ___
 
 
-!!! note annotate ""
+[//]: # (!!! note annotate "")
 
-    ![img.png](https://pbs.twimg.com/media/G25eD0nXEAAoCGc?format=jpg&name=large)
+[//]: # ()
+[//]: # (    ![img.png]&#40;https://pbs.twimg.com/media/G25eD0nXEAAoCGc?format=jpg&name=large&#41;)
 
-!!! note annotate ""
+[//]: # ()
+[//]: # (!!! note annotate "")
 
-    ![img.png](https://pbs.twimg.com/media/G2PrzBgbMAAArmX?format=jpg&name=large)
+[//]: # ()
+[//]: # (    ![img.png]&#40;https://pbs.twimg.com/media/G2PrzBgbMAAArmX?format=jpg&name=large&#41;)
 
-!!! note annotate ""
+[//]: # ()
+[//]: # (!!! note annotate "")
 
-    ![img.png](https://pbs.twimg.com/media/G2OweBBaIAIhu9d?format=jpg&name=large)
+[//]: # ()
+[//]: # (    ![img.png]&#40;https://pbs.twimg.com/media/G2OweBBaIAIhu9d?format=jpg&name=large&#41;)
 
-#### Most asked DB persistence questions in Springboot :
+[//]: # ()
+[//]: # (#### Most asked DB persistence questions in Springboot :)
 
+[//]: # ()
+[//]: # ()
+[//]: # (!!! note annotate "")
 
-!!! note annotate ""
+[//]: # ()
+[//]: # (     ![img.png]&#40;https://pbs.twimg.com/media/G17dTfXaEAECriv?format=jpg&name=medium&#41;)
 
-     ![img.png](https://pbs.twimg.com/media/G17dTfXaEAECriv?format=jpg&name=medium)
-!!! note annotate ""
+[//]: # (!!! note annotate "")
 
-    - ![img.png](https://pbs.twimg.com/media/G1tAq4aaAAMW_6I?format=jpg&name=medium)
+[//]: # ()
+[//]: # (    - ![img.png]&#40;https://pbs.twimg.com/media/G1tAq4aaAAMW_6I?format=jpg&name=medium&#41;)
 
-!!! note annotate ""
+[//]: # ()
+[//]: # (!!! note annotate "")
 
-    - ![img.png](https://pbs.twimg.com/media/G1T98VGbQAA18Y2?format=jpg&name=4096x4096)
+[//]: # ()
+[//]: # (    - ![img.png]&#40;https://pbs.twimg.com/media/G1T98VGbQAA18Y2?format=jpg&name=4096x4096&#41;)
 
-##### Spring security
-!!! note annotate ""
+[//]: # ()
+[//]: # (##### Spring security)
 
-    - ![img.png](assets/images/spring-sec.png)
+[//]: # (!!! note annotate "")
 
-!!! note annotate ""
+[//]: # ()
+[//]: # (    - ![img.png]&#40;assets/images/spring-sec.png&#41;)
 
-    - ![img.png](https://pbs.twimg.com/media/GzX_zoBa4AcYagk?format=jpg&name=medium)
-    1. equals(Object obj)→checks if two objects have the same references but we often override for custom comparison
-    2. hashCode()→ generates an integer hash value for the object, crucial for using it in hash-based collections like HashMap.
-    3. toString()→ returns a string describing the object's contents, can use in debugging and logging instead of just showing memory addresses.
-    4. getClass()→ gives you the runtime class of the object, useful for reflection and type checking
-    5. clone()→ makes a shallow copy of the object, but you usually need to implement Cloneable and override it properly.
-    6. finalize()→gets called by the JVM just before garbage collection((better to use try-with-resources, in most cases)
-    7. wait()→makes the current thread wait until another thread calls notify() or notifyAll() on the same object, key for inter-thread communication.
-    8. notify()→wakes up one waiting thread that's called wait() on this object, used in producer-consumer scenarios.
-    9. notifyAll()→wakes up all threads waiting on this object, more inclusive than notify() but can be less efficient.
+[//]: # ()
+[//]: # (!!! note annotate "")
+
+[//]: # ()
+[//]: # (    - ![img.png]&#40;https://pbs.twimg.com/media/GzX_zoBa4AcYagk?format=jpg&name=medium&#41;)
+
+[//]: # (    1. equals&#40;Object obj&#41;→checks if two objects have the same references but we often override for custom comparison)
+
+[//]: # (    2. hashCode&#40;&#41;→ generates an integer hash value for the object, crucial for using it in hash-based collections like HashMap.)
+
+[//]: # (    3. toString&#40;&#41;→ returns a string describing the object's contents, can use in debugging and logging instead of just showing memory addresses.)
+
+[//]: # (    4. getClass&#40;&#41;→ gives you the runtime class of the object, useful for reflection and type checking)
+
+[//]: # (    5. clone&#40;&#41;→ makes a shallow copy of the object, but you usually need to implement Cloneable and override it properly.)
+
+[//]: # (    6. finalize&#40;&#41;→gets called by the JVM just before garbage collection&#40;&#40;better to use try-with-resources, in most cases&#41;)
+
+[//]: # (    7. wait&#40;&#41;→makes the current thread wait until another thread calls notify&#40;&#41; or notifyAll&#40;&#41; on the same object, key for inter-thread communication.)
+
+[//]: # (    8. notify&#40;&#41;→wakes up one waiting thread that's called wait&#40;&#41; on this object, used in producer-consumer scenarios.)
+
+[//]: # (    9. notifyAll&#40;&#41;→wakes up all threads waiting on this object, more inclusive than notify&#40;&#41; but can be less efficient.)
 
 !!! note annotate ""
 

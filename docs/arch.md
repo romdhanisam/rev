@@ -76,31 +76,52 @@
             - Robustes: solides, résistants, etc. : les microservices sont plus résistants aux pannes que les monolithes.
             - Une architecture de microservice complète est un réseau interconnecté de services isolés.
 
-##### ^^Event-Driven Architecture^^
+[//]: # (##### ^^Event-Driven Architecture^^)
 
-- Un modèle d'architecture ==où les systèmes **réagissent** à des événements en temps réel.==
-    - [x] **réagissent** c-à-d publient, consomment ou acheminent des événements.
-    - Un modèle d'architecture moderne créé à partir de petits services découplés qui **réagissent** à des événements en temps réel
+[//]: # ()
+[//]: # (- Un modèle d'architecture ==où les systèmes **réagissent** à des événements en temps réel.==)
 
-- **`Un événement`** représente ^^un changement d'état ou une mise à jour^^. Par exemple : commande payée, ou utilisateur créé 
-    - Un événement transmet (envoi) un état à un instant T (le numéro de transaction, le montant et le numéro de commande
+[//]: # (    - [x] **réagissent** c-à-d publient, consomment ou acheminent des événements.)
 
-1. ^^Les différents modèles pour implémenter une event driven architecture^^
-    - L'architecture Event-Driven (orientée événements) peut utiliser le modèle de **`Pub/sub`** ou le modèle de **`Event streaming`**.
-        1. **`Pub/sub`** : lorsqu'un événement est publié, le router va le communiquer 
-            à tous les consumers qui sont abonnés à cet événement. 
-            Si un nouveau consumer s'abonne à un événement, il n'a pas accès aux événements passés. 
-        2. **`Event streaming`** : les événements sont enregistrés dans un journal dans l'ordre chronologique. 
-            Un client peut lire n'importe quelle partie du flux à n'importe quel moment. 
-            Cela signifie aussi qu'un client peut s'abonner à tout moment et avoir accès aux événements passés.
-2. ^^Caractéristiques de l’EDA^^
-    1. **Découplage** des composants :
-        - Les services communiquent via des événements sans dépendances directes. 
-        ^^ce qui leur permet d'être modifiés et déployés de manière indépendante.^^
-    2. **Scalabilité** et résilience :
-        - Les systèmes peuvent gérer une grande quantité d’événements simultanés.
-    3. Traitement **asynchrone** :
-        - Les services ne nécessitent pas de réponse immédiate, améliorant la fluidité.
+[//]: # (    - Un modèle d'architecture moderne créé à partir de petits services découplés qui **réagissent** à des événements en temps réel)
+
+[//]: # ()
+[//]: # (- **`Un événement`** représente ^^un changement d'état ou une mise à jour^^. Par exemple : commande payée, ou utilisateur créé )
+
+[//]: # (    - Un événement transmet &#40;envoi&#41; un état à un instant T &#40;le numéro de transaction, le montant et le numéro de commande)
+
+[//]: # ()
+[//]: # (1. ^^Les différents modèles pour implémenter une event driven architecture^^)
+
+[//]: # (    - L'architecture Event-Driven &#40;orientée événements&#41; peut utiliser le modèle de **`Pub/sub`** ou le modèle de **`Event streaming`**.)
+
+[//]: # (        1. **`Pub/sub`** : lorsqu'un événement est publié, le router va le communiquer )
+
+[//]: # (            à tous les consumers qui sont abonnés à cet événement. )
+
+[//]: # (            Si un nouveau consumer s'abonne à un événement, il n'a pas accès aux événements passés. )
+
+[//]: # (        2. **`Event streaming`** : les événements sont enregistrés dans un journal dans l'ordre chronologique. )
+
+[//]: # (            Un client peut lire n'importe quelle partie du flux à n'importe quel moment. )
+
+[//]: # (            Cela signifie aussi qu'un client peut s'abonner à tout moment et avoir accès aux événements passés.)
+
+[//]: # (2. ^^Caractéristiques de l’EDA^^)
+
+[//]: # (    1. **Découplage** des composants :)
+
+[//]: # (        - Les services communiquent via des événements sans dépendances directes. )
+
+[//]: # (        ^^ce qui leur permet d'être modifiés et déployés de manière indépendante.^^)
+
+[//]: # (    2. **Scalabilité** et résilience :)
+
+[//]: # (        - Les systèmes peuvent gérer une grande quantité d’événements simultanés.)
+
+[//]: # (    3. Traitement **asynchrone** :)
+
+[//]: # (        - Les services ne nécessitent pas de réponse immédiate, améliorant la fluidité.)
 
 ##### SOA vs Microservices
 !!! info annotate "SOA vs Microservices"
