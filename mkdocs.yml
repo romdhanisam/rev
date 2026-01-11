@@ -20,6 +20,10 @@ nav:
   - Architecture: arch.md
   - DevOps: devops.md
   - Kafka-: kafka-.md
+#  - pow:
+#      - note: pow/note.md
+#      - note1: pow/note1.md
+#      - note2: pow/note2.md
 #  - Notes-: note.md
 #  - Microprofile-: Microprofile-SOA-microservice-JavaEE.md
 #  - Réseaux-: reseau.md
