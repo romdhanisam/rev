@@ -1,0 +1,2688 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Samir Romdhani">
+      
+      
+        <link rel="canonical" href="https://romdhanisam.github.io/rev/java/">
+      
+      
+        <link rel="prev" href="../oop/">
+      
+      
+        <link rel="next" href="../patterns/">
+      
+      
+        
+          <link rel="alternate" href="./" hreflang="fr">
+        
+          <link rel="alternate" href="../en/java/" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/materialformkdocs.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Java - Wording</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M22%2012a10%2010%200%200%201-10%2010A10%2010%200%200%201%202%2012%2010%2010%200%200%201%2012%202a10%2010%200%200%201%2010%2010M6%2013h8l-3.5%203.5%201.42%201.42L17.84%2012l-5.92-5.92L10.5%207.5%2014%2011H6z%22/%3E%3C/svg%3E');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/css/extra.css">
+    
+      <link rel="stylesheet" href="../assets/css/neoteroi-cards.css">
+    
+      <link rel="stylesheet" href="../assets/css/neoteroi-mkdocs.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href=".." title="Wording" class="md-header__button md-logo" aria-label="Wording" data-md-component="logo">
+      
+  <div class="social-icons">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/materialformkdocs.svg" alt="Profile" class="custom-icon" />
+  </div>
+
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Wording
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Java
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Sélectionner la langue">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="fr" class="md-select__link">
+              Français
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../en/java/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/romdhanisam/rev/" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    romdhanisam/rev
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  About
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../oop/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  OOP
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Java
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../patterns/" class="md-tabs__link">
+          
+  
+  
+  Design - Pattern
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../spring/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Spring
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../bdd/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  BDD
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../java-spring-words/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Java-Spring-BDD
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../angular/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Angular
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../arch/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Architecture
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../devops/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  DevOps
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kafka-/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kafka-
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Wording" class="md-nav__button md-logo" aria-label="Wording" data-md-component="logo">
+      
+  <div class="social-icons">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/materialformkdocs.svg" alt="Profile" class="custom-icon" />
+  </div>
+
+
+    </a>
+    Wording
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/romdhanisam/rev/" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    romdhanisam/rev
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--done"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../oop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OOP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Java
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Java
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#solid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SOLID
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cohesion-et-couplage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cohésion et Couplage
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#composition-over-inheritance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Composition over Inheritance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonctionnalites-de-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fonctionnalités de Java
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quelle-est-la-difference-entre-jdk-jre-et-jvm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quelle est la différence entre JDK, JRE et JVM
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heap-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Heap Memory
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stack-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stack Memory
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interface-fonctionnelle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interface fonctionnelle
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#une-classe-abstraite-et-une-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Une classe abstraite et une interface
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methode-abstraite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Méthode abstraite
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overriding-vs-over-loading" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overriding vs Over-loading
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#le-mot-cle-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le mot clé final
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-difference-entre-methodes-statiques-et-non-statiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La différence entre méthodes statiques et non statiques
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#package-en-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Package en Java
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collections-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Collections / List
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pile-stack-et-file-dattente-queue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pile (Stack) et File d’attente (Queue)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hashmap-hashtable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HashMap | HashTable :
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hashset-treeset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HashSet | TreeSet
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#immuabilite-et-thread-safety" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Immuabilité et thread safety :
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#string-vs-stringbuilder-vs-stringbuffer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        String vs StringBuilder vs StringBuffer
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optional
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#equals-vs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        equals vs ==
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#equals-vs-vs-hashcode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        equals vs == vs hashCode
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#garbage-collector" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Garbage Collector
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modificateurs-dacces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modificateurs d’accès
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bloc-try-catch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bloc try-catch
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bloc-statique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bloc statique
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exceptions-checkedunchecked" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exceptions (checked/unchecked)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expression-lambda-fonction-anonyme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Expression lambda (Fonction anonyme)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#volatile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        volatile
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pass-by-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        pass-by-value
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thread-en-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Thread en Java
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#threadlocal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ThreadLocal
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#perf-star" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Perf : STAR
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#java-nouveautees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Java nouveautées
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Java nouveautées">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#java8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Java8:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#java-9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Java 9
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#java-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Java 11
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#java-17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Java 17
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#java-21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Java 21
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stream-les-bonnes-pratiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stream | les bonnes pratiques
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interface-fonctionnelle_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interface fonctionnelle
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Design - Pattern
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Design - Pattern
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Patterns
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../patterns_annexe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Patterns annexe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../spring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Spring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bdd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BDD
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java-spring-words/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Java-Spring-BDD
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../angular/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Angular
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../arch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../devops/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DevOps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kafka-/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kafka-
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="_1"><img alt="" src="https://img.shields.io/badge/Java-%23F5F6F7.svg?&amp;logo=openjdk&amp;logoColor=red" /></h1>
+<h3 id="solid">SOLID</h3>
+<div class="admonition note annotate">
+<p class="admonition-title">SOLID</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> SOLID regroupe 5 principes qui facilitent la maintenabilité, les tests et l’évolution du code.</p>
+</li>
+<li>
+<p><strong>S – Single Responsibility Principle</strong>  </p>
+<ul>
+<li>Chaque classe doit avoir une seule responsabilité,</li>
+</ul>
+</li>
+<li>
+<p><strong>O – Open/Closed Principle</strong>  </p>
+<ul>
+<li>Le code doit être <mark>ouvert à l’extension, fermé à la modification.</mark> </li>
+<li>On ajoute de nouvelles fonctionnalités sans casser l’existant.</li>
+</ul>
+</li>
+<li>
+<p><strong>L – Liskov Substitution Principle</strong>  </p>
+<ul>
+<li>Une <mark>sous-classe doit être capable de remplacer sa classe parent</mark> sans changer le fonctionnement du programme</li>
+<li>Garantit la cohérence des héritages.</li>
+</ul>
+</li>
+<li>
+<p><strong>I – Interface Segregation Principle</strong>  </p>
+<ul>
+<li>Ce principe <mark>recommande de découper les interfaces en contrats précis.</mark></li>
+<li><mark>On évite les interfaces</mark> trop <mark>générales</mark> : chaque interface doit répondre à un besoin précis</li>
+<li>Il vaut mieux créer plusieurs petites interfaces spécifiques qu’une grosse interface générale.</li>
+</ul>
+</li>
+<li>
+<p><strong>D – Dependency Inversion Principle</strong>  </p>
+<ul>
+<li>C’est <mark>une technique de création des objets</mark> dans laquelle les objets ne créent pas eux-mêmes leurs dépendances. 
+  Au lieu de ça, l'objet déclare ses dépendances et c’est le rôle d’un objet externe ou à un framework 
+  de fournir les dépendances concrètes à l’objet.</li>
+<li>Les classes doivent dépendre d’abstractions, pas d’implémentations concrètes.  </li>
+<li>Facilite les tests et le changement de composants.</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><strong>Pourquoi c’est clé SOLID en développement web ?</strong><br />
+Dans un projet Java, .NET, Node.js ou autre, respecter SOLID permet :</p>
+<ul>
+<li>d’ajouter de nouvelles features plus rapidement </li>
+<li>de réduire les bugs lors des évolutions </li>
+<li>de faciliter les tests unitaires</li>
+</ul>
+</blockquote>
+</div>
+<h3 id="cohesion-et-couplage">Cohésion et Couplage</h3>
+<div class="admonition note annotate">
+<p class="admonition-title">Cohésion et Couplage</p>
+<blockquote>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> en POO, on cherche: une cohésion forte + un couplage faible</li>
+</ul>
+</blockquote>
+<ul>
+<li>
+<p><strong>Cohésion</strong>: Les éléments d’une classe travaillent ensemble sur une seule tâche</p>
+<ul>
+<li><ins>Le degré de dépendance</ins> et de <ins>relation logique</ins> entre les différentes parties (méthodes, attributs) 
+  d’une <ins>même classe</ins> ou d’un même module.</li>
+<li>Définit dans quelle mesure les éléments d’une même classe ou d’un même module travaillent ensemble pour accomplir une seule tâche. </li>
+<li>Assurer la responsabilité interne</li>
+</ul>
+</li>
+<li>
+<p><strong>Couplage</strong>: Les classes sont indépendantes les unes des autres</p>
+<ul>
+<li><ins>Le degré de dépendance entre deux classes</ins></li>
+<li>Mesure le degré d’indépendance entre les classes ou modules.</li>
+<li>Une classe découplée ne dépend pas fortement d’autres classes spécifiques. </li>
+<li>Faciliter la maintenance et l’évolution du code</li>
+</ul>
+</li>
+</ul>
+</div>
+<ul>
+<li><mark>Le besoin principal est la cohérence forte et la simplicité</mark></li>
+</ul>
+<h3 id="composition-over-inheritance">Composition over Inheritance</h3>
+<div class="admonition note annotate">
+<p class="admonition-title">Composition over Inheritance</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> C’est un principe de conception orientée objet qui recommande d'utiliser
+  la composition d’objets plutôt que d’utiliser systématiquement l’héritage entre classes.</p>
+</li>
+<li>
+<p><strong>Héritage :</strong> une sous-classe hérite d’une classe mère  </p>
+</li>
+<li><strong>Composition :</strong> une classe contient une instance d’une autre classe.</li>
+</ul>
+<p>Pourquoi ?</p>
+<ul>
+<li>L’héritage <strong>crée une forte dépendance entre les classes</strong> : Si on modifie une classe mère. <ul>
+<li>Toutes les sous classes sont affectées </li>
+<li>On es limité par la hiérarchie (une seule classe mère).</li>
+</ul>
+</li>
+<li>La composition, au contraire : <strong>offre plus de flexibilité</strong> : <ul>
+<li>On peut changer le comportement d’un objet en changeant ses composants.</li>
+<li>Favorise la réutilisation du code sans contrainte hiérarchique</li>
+</ul>
+</li>
+</ul>
+<p><img alt="img.png" src="../assets/images/comp-over.png" width="700px" /></p>
+</div>
+<h3 id="fonctionnalites-de-java">Fonctionnalités de Java</h3>
+<div class="admonition note annotate">
+<p>Java est un langage de programmation orienté objet qui présente des fonctionnalités telles 
+que l’indépendance vis-à-vis des plateformes, la gestion automatique de la mémoire, la gestion multi-threading, 
+le traitement des exceptions et une sécurité solide.</p>
+</div>
+<h3 id="quelle-est-la-difference-entre-jdk-jre-et-jvm">Quelle est la différence entre JDK, JRE et JVM</h3>
+<div class="admonition note annotate">
+<ul>
+<li>
+<p><strong>JDK</strong> - Java Development Kit</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Utilisé pour développer des applications Java.  <ul>
+<li>Le kit de développement Java est l'ensemble des outils dont le développeur a besoin pour développer des logiciels qui peuvent être exécutés par la JVM et le JRE.</li>
+<li>JDK est le composant principal de l'environnent Java et il fournit tous les outils, 
+  les exécutables et les binaires requis pour compiler, débogguer et exécuter un programme Java</li>
+</ul>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>JDK</strong> contient <mark>le JRE</mark>, <mark>des API</mark>, <mark>un compilateur Java</mark> et d'autres fichiers requis pour <strong>developer</strong> d'applications Java.</li>
+</ul>
+</li>
+<li>
+<p><strong>JRE</strong> - Java Runtime Environment</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Utilisé pour exécuter des applications Java.<ul>
+<li><strong>Le JRE</strong> crée la <code>JVM</code> et assure que les dépendances sont disponibles pour les programmes Java.  </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>JVM</strong> - Java Virtual Machine</p>
+<ul class="task-list">
+<li>JVM c'est <mark>une couche d’abstraction entre une application Java et le système d'exploitation</mark> <ul>
+<li><mark>Une application Java ne s'exécute pas directement dans le système d'exploitation</mark>
+    mais dans une machine virtuelle qui s'exécute dans le système d'exploitation 
+    et <ins>propose une couche d'abstraction</ins> entre l'<strong>application Java</strong> et ce <strong>système</strong>. </li>
+</ul>
+</li>
+<li><mark>La machine virtuelle ne connaît pas le langage Java</mark> : 
+  elle ne connaît que le <strong>bytecode</strong> qui est issu de la compilation de codes sources écrits en Java. </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> La machine virtuelle permet notamment :<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> L'interprétation du bytecode </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> L'interaction avec le système d’exploitation</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<ul>
+<li>
+<p><strong><code>ClassLoader</code></strong>: Est une partie du JRE qui charge dynamiquement les classes java 
+  et les interfaces dans la machines virtuelle.</p>
+</li>
+<li>
+<p><strong><code>WrapperClass</code></strong>: C'est une classe qui fournit un moyen d'utiliser les types 
+    de données primitives comme des objets , qui encapsule les types de données primitifs, 
+    on a besoin de ces classes pour garder l'objet final et immutable.</p>
+</li>
+</ul>
+</blockquote>
+<p><img alt="img.png" src="../assets/images/jvm.png" /></p>
+<p><img alt="img.png" src="../assets/images/heap-stack.png" /></p>
+</div>
+<div class="admonition note annotate">
+<h3 id="heap-memory"><strong>Heap Memory</strong></h3>
+<div class="admonition note annotate">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Le <strong>HEAP</strong> est une partie (portion) de la mémoire utilisé par le JVM pour <strong>stocker les objets créés par l'application</strong>. </li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Il s'agit d'une partie de mémoire <strong>partagée entre tous les threads</strong>. </p>
+<ul>
+<li>Allocation dynamique du mémoire pour les objets JAVA et les classe JRE au moment de l’exécution. </li>
+</ul>
+</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Les objets sont toujours créé dans l'espace du Tas(Heap) et les références dans la mémoire du pile (Stack)</p>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> N'est pas Thread Safe :: Mémoire plaine : <code>OutOfMemoryError</code> </li>
+<li><strong>Constant String Pool</strong>:<ul>
+<li><code>Le Constant String Pool</code> n'est rien d'autre qu'une partie de stockage dans le Heap Memory (Tas) 
+    où les chaînes de caractères sont stockées. </li>
+<li>Il s'agit d'un système similaire à l'allocation d’objets.</li>
+</ul>
+</li>
+</ul>
+</div>
+<h3 id="stack-memory"><strong>Stack Memory</strong></h3>
+<div class="admonition note annotate">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> La <strong>STACK</strong> est une partie (portion) mémoire qui sert d'espace 
+    de <strong>stockage aux variables déclarées par les fonctions</strong>
+    et <strong>les références à des objets</strong> qui se trouvent dans le HEAP<ul>
+<li>Allocation du mémoire:<ul>
+<li>Les références à des objets qui se trouvent dans le HEAP</li>
+<li>Les valeurs primitives d'une méthode</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> La plupart du temps, elle est de taille fixe, déclarée lors du démarrage du thread.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Thread-safe car chaque thread fonctionne dans sa propre pile (Stack)</li>
+</ul>
+</div>
+</div>
+<h3 id="interface-fonctionnelle">Interface fonctionnelle</h3>
+<div class="admonition note annotate">
+<ul class="task-list">
+<li class="task-list-item">
+<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Une interface fonctionnelle est une interface qui ne contient qu'une seule méthode abstraite.</p>
+<ul>
+<li>Elle sert de modèle pour <strong>une expression lambda</strong> ou <strong>une référence de méthode</strong>.</li>
+</ul>
+</li>
+<li>
+<p>L'interface fonctionnelle a été introduite dans Java 8 qui dispose une unique méthode abstraite.
+  Qui peut prendre en charge l'expression lambda</p>
+</li>
+<li>
+<p>Mais aussi qui peut prendre en paramètre</p>
+<ul>
+<li>Une référence vers une methode statique</li>
+<li>Une référence vers une methode d'instance</li>
+<li>Une référence vers un constructeur</li>
+</ul>
+</li>
+<li>Dans Java 8, 4 interfaces fonctionnelles principales sont introduites :<ul>
+<li>Predicate</li>
+<li>Consumer</li>
+<li>Supplier</li>
+<li>Function</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>La méthode abstraite unique représente une seule unité de calcul, ce qui la rend idéale pour les paradigmes de programmation fonctionnelle.</p>
+</blockquote>
+<div class="admonition note annotate">
+<p class="admonition-title">La programmation fonctionnelle</p>
+<ul>
+<li>La programmation fonctionnelle est un style de programmation qui traite le calcul comme 
+  l'évaluation de fonctions mathématiques.</li>
+<li>Elle se concentre sur l'écriture de code de manière
+  déclarative et concise, favorisant l'immuabilité et les opérations sans effets secondaires.
+  Avec sa prise en charge des interfaces fonctionnelles, Java apporte certains concepts de programmation 
+  fonctionnelle tout en conservant sa nature orientée objet.</li>
+</ul>
+<hr />
+<ul>
+<li>La programmation fonctionnelle est un paradigme de programmation déclaratif, traitant des opérations successivement 
+  en évitant les mutations de données et les changements d'état.</li>
+<li>Un enchainement d'application de fonctions</li>
+<li>
+<p>Un code source conçu en programmation fonctionnelle va être plus concis, plus prédictible et plus facile 
+  à tester qu'un code source programmé avec la programmation orientée objet. 
+  En revanche, il va paraître plus dense et plus compliqué à comprendre pour les développeurs plus juniors.</p>
+</li>
+<li>
+<p><i><strong>Par opposition à la programmation orientée objet, l'approche fonctionnelle de la programmation 
+  consiste à éviter les mutations de données et les changements d'états</strong></i>, 
+  et les effets de bords dans un code source en se basant sur les principes d'<strong>immuabilité</strong> et <strong>de composition de fonctions.</strong></p>
+<ul>
+<li>Le code en programmation fonctionnelle n'a aucun état (à part l'état lié aux données initiales).</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="admonition note annotate">
+<p class="admonition-title">La programmation procédurale</p>
+</div>
+<ul>
+<li>Il s'agit d'une séquence d'instructions s'exécutant les unes après les autres<ul>
+<li><a href="https://welovedevs.com/fr/articles/paradigme-programmation-orientee-objet-et-programmation-fonctionnelle/">link-programmation-orientee-objet-et-programmation-fonctionnelle</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h3 id="une-classe-abstraite-et-une-interface">Une classe abstraite et une interface</h3>
+<div class="admonition note annotate">
+<ul>
+<li>Classe abstraite vs une Interface<ol>
+<li>Une classe abstraite peut avoir des méthodes abstraites et non abstraites, alors qu’une interface ne peut avoir que des méthodes abstraites.  <ul>
+<li>Dans une interface les méthodes sont seulement déclarées. <br/> 
+  Cela permet de définir un ensemble de services visibles depuis l'extérieur (API).  </li>
+</ul>
+</li>
+<li>Une classe abstraite peut avoir des variables d’instances alors qu’une interface ne peut avoir que des constantes.</li>
+</ol>
+</li>
+</ul>
+<div class="admonition note annotate">
+<p class="admonition-title">Les classes abstraites</p>
+<ul>
+<li>Une classe abstraite est <ins>une classe dont toutes les méthodes n'ont pas été implémentées</ins>. </li>
+<li>Elle n'est pas instanciable, <mark>mais sert à factoriser du code.</mark></li>
+<li><ins>Une classe qui hérite d'une classe abstraite doit obligatoirement implémenter 
+    les méthodes manquantes</ins> (qui ont été elles-mêmes déclarées «abstraites» dans la classe parente). <ul>
+<li>Elle n'est pas obligée de réimplémenter les méthodes déjà implémentées dans la classe parente</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="admonition note annotate">
+<p class="admonition-title">Les interfaces</p>
+<ul>
+<li>Une interface est <ins>un peu comme une classe abstraite dans laquelle aucune méthode ne serait implémentée</ins>,
+  les méthodes sont seulement déclarées. </li>
+<li>Cela permet de définir un ensemble de services visibles depuis l'extérieur (l'API : Application Programming Interface), 
+  sans se préoccuper de la façon dont ces services seront réellement implémentés.</li>
+<li>Une classe qui implémente une interface doit obligatoirement implémenter chacune des méthodes déclarées dans l'interface,
+  à moins qu'elle ne soit elle-même déclarée… abstraite !</li>
+</ul>
+</div>
+<div class="admonition note annotate">
+<p class="admonition-title">Classe abstraite ou interface ? </p>
+<ul>
+<li>Classes abtraites et interfaces ont chacune une fonction bien distincte <ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Les classes abstraites visent à factoriser du code - facilite la factorisation du code.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Les interfaces sont utilisées pour définir des contrats de service.  </li>
+</ul>
+</li>
+<li>Pourquoi ne pas utiliser des classes abstraites (dans lesquelles aucune méthode ne serait implémentée) <ul>
+<li>Dans la plupart des langages actuels (c'est notamment le cas de Java, C#, PHP), 
+ il n'est possible pour une classe d'hériter que d'une seule classe parente (abstraite ou non), mais d'implémenter plusieurs interfaces.</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<h3 id="methode-abstraite">Méthode abstraite</h3>
+<div class="admonition note annotate">
+<ul>
+<li>Méthode abstraite:<ul>
+<li>Est une méthode sans implémentation, définie dans une classe abstraite ou une interface, à implémenter dans la sous-classe.</li>
+</ul>
+</li>
+</ul>
+</div>
+<h3 id="overriding-vs-over-loading">Overriding vs Over-loading</h3>
+<div class="admonition note annotate">
+<ul>
+<li>On parle de <strong>Overriding</strong> <ins>redéfinition de méthode</ins> lorsqu’une sous classe fournit une implémentation spécifique d’une méthode 
+    déjà définie dans la classe parent</li>
+<li>On parle de <strong>Overloading</strong> <ins>surcharge de méthode</ins> lorsqu’une classe possède plusieurs méthodes portant le même nom mais avec 
+  des paramètres différents</li>
+</ul>
+<hr />
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>Redéfinition (overriding) :</strong> une sous-classe fournit une implémentation spécifique d’une méthode déjà définie.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>Surcharge (overloading) :</strong> plusieurs méthodes du même nom mais avec des paramètres différents.</li>
+</ul>
+</div>
+<h3 id="le-mot-cle-final">Le mot clé final</h3>
+<div class="admonition note annotate">
+<p>Utilisé pour :</p>
+<ul>
+<li>Déclarer une variable constante.</li>
+<li>Une méthode non redéfinissable (no overriding).</li>
+<li>Une classe non extensible (une protection contre l’héritage.)</li>
+</ul>
+</div>
+<h3 id="la-difference-entre-methodes-statiques-et-non-statiques">La différence entre méthodes statiques et non statiques</h3>
+<div class="admonition note annotate">
+<ul>
+<li><ins>Les méthodes statique</ins> peuvent être appelées sans avoir besoin d’une instance de classe.</li>
+<li><ins>Les méthodes non statique</ins> ne peuvent pas être appelées que sur un objet de la classe.</li>
+</ul>
+</div>
+<h3 id="package-en-java">Package en Java</h3>
+<div class="admonition note annotate">
+<p>Un ensemble de classes et d’interfaces apparentées qui constituent un espace de noms pour les classes et les interfaces.</p>
+</div>
+<h3 id="collections-list">Collections / List</h3>
+<div class="admonition note annotate">
+<ul>
+<li><strong>ArrayList</strong>: <mark>Liste basée sur un tableau dynamique</mark><ul>
+<li>Contient des elements de meme type, il est permet un accès rapide par index.</li>
+</ul>
+</li>
+<li><strong>Array</strong>: <mark>Tableau de taille fixe</mark>, stocke des éléments du même type, il est permet un accès rapide par index.</li>
+<li><strong>LinkedList</strong> – <mark>Liste chaînée</mark>, chaque élément (noeud) pointe vers le suivant et le précédent). <ul>
+<li>Insertions et suppressions rapides mais accès par index plus lent.</li>
+</ul>
+</li>
+<li><strong>Vector</strong> : = <mark>ArrayList synchronisé (thread-safe)</mark><ul>
+<li><em>Liste dynamique basée sur un tableau</em>, similaire à ArrayList mais synchronisée (thread-safe) </li>
+<li>Vector était historiquement utilisé avant Java 2 pour gérer des listes dynamiques thread-safe. </li>
+<li>Aujourd’hui, son usage est limité car on préfère <mark><strong>ArrayList + synchronisation explicite</strong></mark>, 
+  préfére ArrayList + Collections.synchronizedList() qui rend thread-safe toutes les méthodes de la liste (add(), remove(), get(), etc.). </li>
+<li><ins>Chaque opération individuelle est atomique</ins>: l’itération est composée de plusieurs opérations internes: 
+  (dans les iteration foreach) <code>synchronized(list)</code> est nécessaire.</li>
+</ul>
+</li>
+<li>
+<p><strong>Stack</strong> – <ins class="critic">Sous-classe de Vector</ins>, utilisée comme <mark>Pile LIFO</mark> (Last In, First Out)</p>
+<ul>
+<li>Ancienne classe, aujourd’hui on préfére Deque (<strong>ArrayDeque</strong>) pour les piles modernes non synchronisées.<blockquote>
+<ul>
+<li><em><strong>Queue et Deque</strong></em> sont des interfaces spécialisées pour la gestion des files et piles,<ul>
+<li>Queue est une interface qui étend Collection</li>
+<li>Deque est une interface qui étend Queue</li>
+</ul>
+</li>
+<li><strong>List</strong> est une interface pour les collections ordonnées avec accès par index.</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Queue</strong> = <ins class="critic">file d’attente FIFO</ins>: est une structure de données dans laquelle les éléments sont traités selon le principe FIFO – First In, First Out : le premier élément ajouté est le premier à être retiré. </p>
+</li>
+<li><strong>Deque</strong>: <ins class="critic">file ou liste à double extrémité (LIFO)</ins> - piles modernes non synchronisées<ul>
+<li>implémentations : ArrayDeque, LinkedList</li>
+</ul>
+</li>
+<li><strong>Map</strong>: <mark><em>Est une structure clé-valeur</em></mark>, il stocke des associations clé-valeur avec des clés uniques.</li>
+<li><strong>Set</strong>: <mark><em>Est une collection d’éléments uniques</em></mark> qui ne contient pas de doublons<blockquote>
+<p><strong><em>HashMap et HashSet</em></strong> utilisent le hashCode de l’objet pour stocker et retrouver rapidement les éléments.</p>
+<p>HashSet repose sur HashMap pour assurer l’unicité des éléments.</p>
+</blockquote>
+</li>
+</ul>
+<p>Deux implémentations de <code>List</code> :</p>
+<ul>
+<li><code>ArrayList</code> : basé sur un tableau dynamique, accès rapide par index.</li>
+<li><code>LinkedList</code> : basé sur une liste doublement chaînée, insertions et suppressions rapides.</li>
+</ul>
+<p><code>Vector</code> = <code>ArrayList</code> synchronisé (thread-safe).<br />
+<code>Stack</code> : sous-classe de <code>Vector</code>, utilisée comme pile LIFO (Last In, First Out).</p>
+<p><code>Queue</code> et <code>Deque</code> : interfaces spécialisées pour files et piles.<br />
+<code>Queue</code> = FIFO (First In, First Out).<br />
+<code>Deque</code> : double extrémité (LIFO/FIFO).</p>
+<p><code>Map</code> : structure clé-valeur.<br />
+<code>Set</code> : collection d’éléments uniques.</p>
+<ul>
+<li>Implémentations <ul>
+<li><code>HashMap</code> : non ordonné</li>
+<li><code>LinkedHashMap</code> : ordre d’insertion</li>
+<li><code>TreeMap</code> : trié par clé</li>
+<li><code>HashSet</code> : aucun ordre garanti</li>
+<li><code>LinkedHashSet</code> : ordre d’insertion</li>
+<li><code>TreeSet</code> : trié</li>
+</ul>
+</li>
+</ul>
+</div>
+<h3 id="pile-stack-et-file-dattente-queue">Pile (Stack) et File d’attente (Queue)</h3>
+<div class="admonition note annotate">
+<ul>
+<li>Une pile <strong>Stack</strong> est une structure de données LIFO (last in, first out)</li>
+<li><strong>Queue</strong> est une structure de données FIFO (first in , first out)</li>
+</ul>
+</div>
+<h3 id="hashmap-hashtable">HashMap | HashTable :</h3>
+<div class="admonition note annotate">
+<ul>
+<li><code>HashMap</code> non thread-safe, autorise <code>null</code>.</li>
+<li><code>HashTable</code> thread-safe, n’autorise pas <code>null</code>.</li>
+</ul>
+</div>
+<h3 id="hashset-treeset">HashSet | TreeSet</h3>
+<div class="admonition note annotate">
+<p class="admonition-title">HashSet vs TreeSet</p>
+<ul>
+<li>HashSet est plus rapide mais non ordonné, TreeSet est plus lent mais 
+  <em>maintient les éléments triés</em>.</li>
+</ul>
+</div>
+<h3 id="immuabilite-et-thread-safety">Immuabilité et thread safety :</h3>
+<div class="admonition note annotate">
+<ul>
+<li>Un objet <strong>immuable</strong> est un objet dont l’état (les valeurs de ses attributs) ne peut pas être modifié après sa création.</li>
+<li>Un objet <strong>immuable</strong> ne peut être modifié après création, donc thread-safe.</li>
+<li>Il s'agit d'objets, qui une fois initialisés, ne peuvent plus être modifiés <ul>
+<li>L'intérêt est d'avoir des objets qui sont par définition thread-safe qui permet d'éviter d'avoir 
+    des blocs synchronized autour de ces objets.<ul>
+<li>Explication: comme il ne peut pas être modifié, plusieurs threads peuvent le lire simultanément sans risque de conflit, 
+    donc pas besoin de blocs synchronized.</li>
+</ul>
+</li>
+<li>Ce qui nous assure de ne pas avoir à nous soucier de problèmes de concurrence.
+    De plus, qui dit objets immuables, dit des objets simples à créer, à utiliser et à tester. </li>
+</ul>
+</li>
+<li><strong>Un objet est synchronisé</strong> === Thread-safe ce qui signifie qu'il peut être utilisé de manière sûre dans des environnements multi-thread. </li>
+<li><strong>Un objet est synchronisé</strong> === Thread-safe c'est-à-dire que dans un environnement multi-threading, il maintient les autres threads dans un état exécutable 
+    ou non exécutable jusqu'à ce que le thread actuel libère le verrou de l’objet.</li>
+</ul>
+</div>
+<h3 id="string-vs-stringbuilder-vs-stringbuffer">String vs StringBuilder vs StringBuffer</h3>
+<div class="admonition note annotate">
+<ul>
+<li><ins>String est immuable</ins>, la concaténation de deux objets string implique la création d'un nouvel objet.</li>
+<li><em>String</em>  implémente l'interface Comparable</li>
+<li><em>StringBuilder</em> est rapide et consomme moins de mémoire qu'une <code>String</code> lors des concaténations. </li>
+</ul>
+<hr />
+<ul>
+<li><strong>String</strong> : immuable, thread-safe</li>
+<li><strong>StringBuilder</strong> : mutable, non thread-safe</li>
+<li><strong>StringBuffer</strong> : mutable, thread-safe</li>
+</ul>
+<hr />
+<ul>
+<li>String immuables why ?<ul>
+<li>Les String sont <strong>immuables</strong> principalement pour la sécurité (données non modifiables),
+  la performance (string pool, cache hash) et le <strong>thread-safety</strong> (partage sans risque).</li>
+</ul>
+</li>
+</ul>
+</div>
+<h3 id="optional">Optional</h3>
+<div class="admonition note annotate">
+<p class="admonition-title">Optional</p>
+<ul>
+<li>Qui permet d'encapsuler un objet dont la valeur peut être null.</li>
+</ul>
+</div>
+<h3 id="equals-vs">equals vs ==</h3>
+<div class="admonition note annotate">
+<ul>
+<li><code>equals</code> est utilisé <strong>pour comparer les valeurs de deux objets</strong>, </li>
+<li><code>L’opérateur ==</code> est utilisé <strong>pour comparer les références (les adresses mémoire)</strong> de deux objets<ul>
+<li><code>==</code>: Utilisé pour les types primitifs (int, boolean, etc.) et les références d’objet. <ul>
+<li>Compare les références mémoire (l’adresse des objets). </li>
+<li>Vérifie si les deux variables pointent vers le même objet.</li>
+</ul>
+</li>
+<li><code>equals()</code>: compare les valeurs.</li>
+</ul>
+</li>
+</ul>
+</div>
+<h3 id="equals-vs-vs-hashcode">equals vs == vs hashCode</h3>
+<div class="admonition note annotate">
+<p class="admonition-title">Différence entre ==, equals() et hashCode()</p>
+<ul>
+<li><em>==</em> Compare les références mémoire (adresses)</li>
+<li><em>equals</em>() Compare le contenu des objets</li>
+<li><em>hashCode()</em> Retourne un entier qui représente l'objet<ul>
+<li><em>hashCode()</em> doit être cohérent avec <em>equals()</em> pour garantir le bon fonctionnement 
+   des collections comme <em>HashMap</em> et <em>HashSet</em>.</li>
+</ul>
+</li>
+</ul>
+</div>
+<h3 id="garbage-collector">Garbage Collector</h3>
+<div class="admonition note annotate">
+<ul>
+<li>Libère automatiquement la mémoire en supprimant les objets dont le programme n’a plus besoin.</li>
+</ul>
+<hr />
+<ul>
+<li>Le <em>Garbage Collector</em> nettoie seulement le Heap (objets). </li>
+<li>La Stack est nettoyée automatiquement quand les méthodes se terminent, sans intervention du GC.</li>
+</ul>
+</div>
+<h3 id="modificateurs-dacces">Modificateurs d’accès</h3>
+<div class="admonition note annotate">
+<ul>
+<li><strong>public</strong> : accessible partout<ul>
+<li>permet d’accéder à une méthode ou variable de partout</li>
+</ul>
+</li>
+<li><strong>private</strong> : accessible uniquement dans la classe<ul>
+<li>restreint l’accès à une méthode ou à une variable à l’intérieur de la classe</li>
+</ul>
+</li>
+<li><strong>protected</strong> : accessible dans la classe et ses sous-classes<ul>
+<li>permet l’accès à une méthode ou à une variable à l’intérieur de la classe et de ses sous-classes.</li>
+</ul>
+</li>
+</ul>
+</div>
+<h3 id="bloc-try-catch">Bloc try-catch</h3>
+<div class="admonition note annotate">
+<p>Utilisé pour la gestion des exceptions :<br />
+<code>try</code> contient le code à risque, <code>catch</code> gère l’exception.</p>
+</div>
+<h3 id="bloc-statique">Bloc statique</h3>
+<div class="admonition note annotate">
+<p>Bloc de code exécuté lors du chargement de la classe en mémoire.</p>
+</div>
+<h3 id="exceptions-checkedunchecked">Exceptions (checked/unchecked)</h3>
+<div class="admonition note annotate">
+<ul>
+<li>Les exceptions <strong>checked</strong> <strong>sont vérifiées à la compilation</strong> et doivent être gérées par le programmeur</li>
+<li>Les exceptions <strong>unchecked</strong> <strong>ne sont pas vérifiées à la compilation</strong> et n’ont pas besoin d’êtres gérées.</li>
+</ul>
+</div>
+<h3 id="expression-lambda-fonction-anonyme">Expression lambda (Fonction anonyme)</h3>
+<div class="admonition note annotate">
+<ul>
+<li>Est une nouvelle fonctionnalité de java qui permet de <mark>créer des fonctions anonymes</mark>, 
+  il simplifie le syntaxe de la programmation fonctionnelle en Java<ul>
+<li>Est une implémentation d’une interface fonctionnelle</li>
+</ul>
+</li>
+</ul>
+</div>
+<h3 id="volatile">volatile</h3>
+<div class="admonition note annotate">
+<ul>
+<li>S’applique uniquement aux variables.</li>
+<li>Utilisé pour partager une variable entre threads.</li>
+</ul>
+<hr />
+<ul>
+<li>Pour assurer la sécurité en multi-thread au niveau des méthodes, on utilise <strong>synchronized</strong> 
+  ou d’autres mécanismes de concurrence (locks, Atomic*, etc.).</li>
+</ul>
+<hr />
+<ul>
+<li><strong>volatile</strong> pour variables partagées entre threads.</li>
+<li><strong>synchronized</strong> pour méthodes ou blocs critiques.</li>
+</ul>
+</div>
+<div class="admonition note annotate">
+<p class="admonition-title">Pourquoi la méthode main est-elle statique en Java ?</p>
+<ul>
+<li>La JVM appelle la méthode <code>main()</code> en se basant sur le nom de la classe elle-même. pas en créant l’objet.</li>
+</ul>
+</div>
+<div class="admonition note annotate">
+<p class="admonition-title">La méthode principale main() peut-elle être surchargée ?</p>
+<ul>
+<li>Oui, il est possible de surcharger la méthode <code>main()</code>, mais seule la version standard sera utilisée comme point d’entrée du programme.
+<div class="language-java highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">string</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span>
+</span></code></pre></div></li>
+</ul>
+</div>
+<div class="admonition note annotate">
+<p class="admonition-title">var d instance et var locale</p>
+<ul>
+<li><ins>Variables d’instance</ins><ul>
+<li>Les variables d’instance sont des variables qui sont accessibles par toutes les méthodes de la classe. </li>
+<li>Elles sont déclarées en dehors des méthodes et à l’intérieur de la classe. </li>
+<li>Ces variables décrivent les propriétés d’un objet et restent liées à celui-ci</li>
+</ul>
+</li>
+<li><ins>Variables locales</ins><ul>
+<li>Les variables locales sont des variables présentes dans un bloc, 
+  une fonction ou un constructeur et ne sont accessibles qu’à l’intérieur de ceux-ci.</li>
+<li>L’utilisation de la variable est limitée à la portée du bloc</li>
+</ul>
+</li>
+</ul>
+</div>
+<h3 id="pass-by-value">pass-by-value</h3>
+<div class="admonition note annotate">
+<p class="admonition-title">Passage par valeur / référence</p>
+<ul>
+<li>En JavaScript, les types primitifs sont passés par valeur, et les objets/tableaux sont passés par référence</li>
+<li>Passage par valeur: On passe une copie de la valeur à la fonction </li>
+<li>Conséquence : Les modifications faites à cette copie n’affectent pas la variable originale.</li>
+</ul>
+<hr />
+<ul>
+<li>Passage par référence: On passe l’adresse (la référence) de la variable à la fonction.</li>
+<li>Conséquence : Les modifications dans la fonction affectent la variable originale.</li>
+</ul>
+</div>
+<div class="admonition note annotate">
+<p class="admonition-title">Explain pass-by-value in Java – how does it behave with object references vs primitives?</p>
+<ul>
+<li>Java est toujours pass-by-value, mais pour les objets, on passe la valeur de la référence, 
+  ce qui peut donner l’impression d’un passage par référence.</li>
+<li>Types primitifs (int, double, boolean, etc.)<ul>
+<li>Une copie de la valeur est passée à la méthode.</li>
+<li>Modifier cette copie n’affecte pas la variable originale.</li>
+</ul>
+</li>
+<li>Références d’objets<ul>
+<li>La méthode reçoit <mark>une copie de la référence</mark> à l’objet, pas l’objet lui-même.</li>
+<li>On peut modifier l’état interne de l’objet, ce qui sera visible en dehors de la méthode.
+  mais pas faire pointer la variable originale vers un nouvel objet.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="admonition note annotate">
+<p class="admonition-title">Que se passe-t-il pendant le chargement et l'initialisation d'une classe (ClassLoader → Liaison → Initialisation) ?</p>
+<ul>
+<li>
+<p>Le <em>ClassLoader</em> charge la classe en mémoire, puis la <em>liaison</em> vérifie le bytecode, 
+  enfin l'<em>initialisation</em> exécute les blocs statiques et assigne les valeurs aux variables statiques.</p>
+</li>
+<li>
+<p>CHARGEMENT (Loading)</p>
+<ul>
+<li>Le <em>ClassLoader</em> lit le fichier <em>.class</em></li>
+<li>Crée l'objet Class en mémoire</li>
+</ul>
+</li>
+<li>LIAISON (Linking)<ul>
+<li>Vérification du bytecode</li>
+<li>La mémoire est allouée pour les statics avec valeurs par défaut</li>
+<li>Les références sont résolues</li>
+</ul>
+</li>
+<li>INITIALISATION (Initialization)<ul>
+<li>Les variables statiques reçoivent leurs vraies valeurs</li>
+<li>Les blocs static{} sont exécutés</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="admonition note annotate">
+<p class="admonition-title">var statiques, blocs statiques et méthodes statiques</p>
+<ul>
+<li>En Java, les <code>variables statiques</code> sont initialisées dans l’ordre où elles apparaissent, 
+  suivies des <code>blocs statiques</code> dans leur ordre d’apparition. </li>
+<li><code>Les méthodes statiques</code> ne sont pas initialisées : elles ne s’exécutent que si on les appelle.</li>
+</ul>
+<hr />
+<ul>
+<li>Les méthodes static ne peuvent pas être surchargées (overridden) en Java.</li>
+</ul>
+</div>
+<div class="admonition note annotate">
+<p class="admonition-title">Autoboxing / Unboxing</p>
+<blockquote>
+<ul>
+<li><strong><code>WrapperClass</code></strong>: C'est une classe qui fournit un moyen d'utiliser les types 
+    de données primitives comme des objets , qui encapsule les types de données primitifs, 
+    on a besoin de ces classes pour garder l'objet final et immutable.</li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>autoboxing</strong> la conversion automatique d’un type primitif vers son wrapper.
+    <div class="language-java highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">Integer</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w">  </span><span class="c1">// autoboxing</span>
+</span></code></pre></div></li>
+<li><strong>unboxing</strong> la conversion automatique du wrapper vers le primitif.
+    <div class="language-java highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">Integer</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w">  </span><span class="c1">// unboxing</span>
+</span></code></pre></div></li>
+</ul>
+</div>
+<div class="admonition note annotate">
+<ul>
+<li>Si une exception est levée dans un bloc static, 
+  la classe échoue son initialisation et devient inaccessible</li>
+</ul>
+</div>
+<div class="admonition note annotate">
+<p class="admonition-title">lombok</p>
+<ul>
+<li>La librairie lombok permet :<ul>
+<li>d'utiliser des annotations au lieu de coder</li>
+<li>d'éviter le codage de setters, getters, contructors, builders, equals, hashcode …</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="admonition note annotate">
+<p class="admonition-title">CDI</p>
+<ul>
+<li>Une spécification destinée à standardiser <ins>l'injection de dépendances et de contextes</ins></li>
+</ul>
+</div>
+<div class="admonition note annotate">
+<p class="admonition-title">Tests unitaires</p>
+<ul>
+<li>Éviter les regressions</li>
+<li>Valider le fonctionnement</li>
+<li>Documenter</li>
+</ul>
+</div>
+<div class="admonition note annotate">
+<p class="admonition-title">Spring-batch est un module pour faire des traitements batch</p>
+<ul>
+<li>Permet de lire des données, les traiter et les sauvegarder
+  JSR 222 (JAXB)</li>
+</ul>
+</div>
+<div class="admonition note annotate">
+<p class="admonition-title">Parlez-nous du compilateur JIT.</p>
+<ul>
+<li><ins>JIT</ins> est l’abréviation de Just-In-Time et est utilisé pour améliorer les performances pendant l’exécution.</li>
+<li>Le compilateur n’est rien d’autre qu’un traducteur du code source en code exécutable par la machine.</li>
+<li>Tout d’abord, la conversion du <mark>code source Java (.java)</mark> en <mark>byte code (.class)</mark> se fait à l’aide du compilateur <code>javac</code>.</li>
+<li>Ensuite, les fichiers <code>.class</code> sont chargés <ins>au moment de l’exécution</ins> par la <code>JVM</code> et à l’aide d’un interpréteur, 
+     ils sont convertis en code compréhensible par la machine.</li>
+<li>Le <ins>compilateur JIT</ins> fait partie de la JVM. Lorsque le compilateur JIT est activé, 
+     la JVM analyse les appels de méthode dans les fichiers <code>.class</code> et les compile 
+     pour obtenir un code natif plus efficace. <br/>
+     Il s’assure également que les appels de méthode prioritaires sont optimisés.</li>
+<li>Une fois l’étape ci-dessus effectuée, la JVM exécute directement le code optimisé 
+     au lieu de réinterpréter le code. Cela augmente les performances et la vitesse d’exécution.</li>
+</ul>
+</div>
+<h3 id="thread-en-java">Thread en Java</h3>
+<div class="admonition note annotate">
+<p>Un thread est un processus léger qui s’exécute indépendamment du flux principal.<br />
+<strong>Mot clé synchronized :</strong> assure qu’un seul thread accède à un bloc de code à la fois.</p>
+</div>
+<h3 id="threadlocal">ThreadLocal</h3>
+<div class="admonition note annotate">
+<ul>
+<li>Problème: comment stocker des données qui doivent être différentes pour chaque thread 
+       sans conflits ni synchronisation complexe.</li>
+<li>Solution : ThreadLocal</li>
+</ul>
+<hr />
+<ul>
+<li><code>ThreadLocal</code> est une classe <ins>qui permet de stocker des données spécifiques à un thread.</ins><ul>
+<li><code>ThreadLocal</code> permet de stocker une valeur différente pour chaque thread, sans partager avec les autres threads</li>
+<li>Chaque thread a sa propre copie indépendante des autres threads.</li>
+<li><code>ThreadLocal</code> crée une copie par thread, donc chaque thread lit/écrit sa propre valeur.</li>
+</ul>
+</li>
+<li><code>ThreadLocal</code> n’est pas une variable globale partagée.<ul>
+<li>ThreadLocal ne rend pas la variable thread-safe pour un partage global : elle n’est thread-safe que par thread.</li>
+<li>Solution correcte pour partage global =&gt; AtomicInteger, synchronized, ConcurrentHashMap ...</li>
+</ul>
+</li>
+<li>Utilité : <ul>
+<li>Éviter le partage de données entre threads et simplifier le passage de variables dans les appels de méthodes.</li>
+<li>Pour stocker des données spécifiques à un thread</li>
+</ul>
+</li>
+</ul>
+</div>
+<h3 id="perf-star">Perf : STAR</h3>
+<div class="admonition note annotate">
+<p class="admonition-title">Perf : STAR</p>
+<ul>
+<li>
+<p>Situation:</p>
+<ul>
+<li>Nous devions traiter des fichiers XML très volumineux conformes à la norme IEC 61850.</li>
+<li>Le traitement via l’API Java <code>JAXB</code> pour convertir ces fichiers en objets Java et inversement était très lent, 
+  ce qui affectait la réactivité de l’application pour les utilisateurs</li>
+</ul>
+</li>
+<li>
+<p>Tâche:</p>
+<ul>
+<li>Ma tâche était de diagnostiquer le problème de performance, proposer et tester des solutions afin d’améliorer le débit et la réactivité 
+  de l’application lors de l’import et de la conversion des fichiers XML.</li>
+</ul>
+</li>
+<li>
+<p>Action:</p>
+<ul>
+<li>J’ai commencé par analyser l’utilisation de la mémoire et le temps de traitement 
+  à l’aide de Spring Actuator et des outils de monitoring JVM afin d’identifier les points critiques de performance<ul>
+<li>les points critiques, afin d’identifier les parties du code qui consommaient 
+  le plus de mémoire et prenaient le plus de temps à s’exécuter 
+  (notamment la conversion complète des fichiers XML en objets Java).</li>
+</ul>
+</li>
+<li>Ensuite, j’ai mené plusieurs proofs-of-concept (POC) :<ul>
+<li>J’ai testé l’API JAXB en utilisant le chargement par blocs avec <code>StAX</code>, 
+    au lieu de charger le fichier XML complet en mémoire.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Résultat:</p>
+<ul>
+<li>
+<p>Grâce à ces actions:</p>
+<ul>
+<li>Le débit de traitement des fichiers XML a été significativement augmenté,
+    et l'app est devenue beaucoup plus réactive.</li>
+<li>
+<p>La mémoire consommée a diminué de 40 %</p>
+<blockquote>
+<p>Le passage du stockage de la base de données vers un NAS a allégé la charge sur la base, amélioré le stockage</p>
+<p>Un NAS est un système de stockage connecté au réseau, 
+qui permet de stocker et partager des fichiers entre plusieurs machines.</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr />
+<ul>
+<li>Sur le projet, nous devions traiter des fichiers XML très volumineux conformes à la norme IEC 61850. </li>
+<li>Le problème, c’est que Le traitement via l’API Java <code>JAXB</code> pour convertir ces fichiers en objets Java et inversement était très lent,
+ce qui affectait la réactivité de l’application pour les utilisateurs</li>
+</ul>
+<hr />
+<ul>
+<li>Ma tâche était de diagnostiquer le problème de performance et de proposer et tester des solutions 
+afin d’améliorer le débit et la réactivité  de l’application lors de l’import et de la conversion des fichiers XML.</li>
+</ul>
+<hr />
+<ul>
+<li>J’ai commencé par analyser <code>la consommation mémoire</code> et <code>le temps de traitement</code> avec <code>Spring Actuator</code>
+    et des outils de monitoring <code>JVM</code>, afin d’identifier les parties du code qui consommaient
+    le plus de mémoire et prenaient le plus de temps à s’exécuter
+    (notamment la conversion complète des fichiers XML en objets Java).</li>
+<li>J’ai fait <code>plusieurs POC</code> : j’ai testé le <strong>traitement par blocs</strong>, 
+au lieu de charger le fichier XML complet en mémoire, tout en continuant à utiliser JAXB pour la conversion.</li>
+</ul>
+<hr />
+<ul>
+<li>Au final, grâce à ces optimisations, le traitement des fichiers XML a été beaucoup plus rapide,
+et l’application est devenue nettement plus réactive pour les utilisateurs.</li>
+</ul>
+</div>
+<h3 id="java-nouveautees">Java nouveautées</h3>
+<div class="admonition note annotate">
+<p><a href="https://www.neosoft.fr/nos-publications/blog-tech/java-8-whats-new-23-date-and-time/">https://www.neosoft.fr/nos-publications/blog-tech/java-8-whats-new-23-date-and-time/</a></p>
+<h4 id="java8">Java8:</h4>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Streams: L'API Stream et Collector</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Les expressions lambda (fct anonyme)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> La classe Optional</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> La programmation fonctionnelle (Interface fonctionnelle) =&gt; foreach, filter, map, reduce ...</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Api Date &amp; Time</li>
+</ul>
+<div class="admonition note annotate">
+<ul>
+<li>L'apport technique majeur de l'API <em>Date</em> de Java 8 =&gt; <ins>des classes immutables</ins></li>
+<li>Les principes architecturaux autour desquels a été conçu la nouvelle API Date sous les suivants :<ul>
+<li><strong>Immuabilité et thread safety</strong> : Toutes les classes centrales de l'API Date and Time sont immuables, ce qui nous assure de ne pas avoir 
+    à nous soucier de problèmes de concurrence. De plus, <em>qui dit objets immuables, dit des objets simples à créer, à utiliser et à tester.</em></li>
+<li><strong>Chaînage</strong> : <i><strong>les méthodes chaînables rendent le code plus lisible</strong></i> et elles sont aussi plus simples à apprendre.
+    Quant aux méthodes de type factory (par exemple: now(), from(), etc.) elles sont utilisées en lieu et place de constructeurs.</li>
+<li>Clareté : Chaque méthode définie clairement ce qu'elle fait. De plus, hormis dans quelques cas particuliers, 
+        passer un paramètre nul à une méthode provoquera la levée d'un NullPointerException. Les méthodes de validation prenant 
+        des objets en paramètre et retournant un booléen retournent généralement "false" lorsque null est passé.</li>
+<li>Extensibilité : Le design pattern Stratégie utilisé à travers l'API permet son extension en évitant toute confusion. 
+        Par exemple, bien que les classes de l' API soient basées sur le système de calendrier ISO-8601, 
+        nous pouvons aussi utiliser les calendriers non-ISO – tel que le calendrier Impérial Japonais – qui sont inclus dans l'API, ou même créer votre propre calendrier.</li>
+</ul>
+</li>
+</ul>
+</div>
+<h4 id="java-9">Java 9</h4>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Modules, var</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> API et outils: des fabriques (factory pour des collections immutables: List.of(), Set.of(), Map.of().</li>
+</ul>
+<h4 id="java-11">Java 11</h4>
+<ul class="task-list">
+<li class="task-list-item">
+<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> JDK 11 embarque un certain nombre de nouvelles classeset méthodes intégrées à des modules déjà existants:
+    <div class="language-java highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="err">######</span><span class="w"> </span><span class="n">java</span><span class="p">.</span><span class="na">lang</span><span class="p">.</span><span class="na">String</span><span class="w"> </span><span class="p">:</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kt">boolean</span><span class="w"> </span><span class="nf">isBlank</span><span class="p">():</span><span class="w"> </span><span class="n">retourne</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="n">si</span><span class="w"> </span><span class="n">le</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">est</span><span class="w"> </span><span class="n">vide</span><span class="w"> </span><span class="n">ou</span><span class="w"> </span><span class="n">n</span><span class="err">&#39;</span><span class="n">est</span><span class="w"> </span><span class="n">composé</span><span class="w"> </span><span class="n">que</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">whitespaces</span><span class="p">,</span><span class="w"> </span><span class="n">sinon</span><span class="w"> </span><span class="kc">false</span><span class="p">.</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">Stream</span><span class="w"> </span><span class="nf">lines</span><span class="p">():</span><span class="w"> </span><span class="n">retourne</span><span class="w"> </span><span class="n">un</span><span class="w"> </span><span class="n">stream</span><span class="w"> </span><span class="n">des</span><span class="w"> </span><span class="n">lignes</span><span class="w"> </span><span class="n">extraites</span><span class="w"> </span><span class="n">du</span><span class="w"> </span><span class="n">String</span><span class="p">.</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="err">######</span><span class="w"> </span><span class="n">New</span><span class="w"> </span><span class="n">File</span><span class="w"> </span><span class="n">Methods</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="n">We</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">use</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="o">*</span><span class="n">readString</span><span class="o">*</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="o">*</span><span class="n">writeString</span><span class="o">*</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">methods</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">Files</span><span class="w"> </span><span class="kd">class</span><span class="err">:</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="nc">Path</span><span class="w"> </span><span class="n">filePath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Files</span><span class="p">.</span><span class="na">writeString</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="n">String</span><span class="w"> </span><span class="n">fileContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Files</span><span class="p">.</span><span class="na">readString</span><span class="p">(</span><span class="n">filePath</span><span class="p">);</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="err">######</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="n">keyword</span><span class="p">)</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">lambda</span><span class="w"> </span><span class="n">parameters</span><span class="w"> </span><span class="n">was</span><span class="w"> </span><span class="n">added</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">Java</span><span class="w"> </span><span class="mf">11.</span>
+</span></code></pre></div></p>
+</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> The new HTTP client from the java.net.http package was introduced in Java 9. It has now become a standard feature in Java 11.</p>
+</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Running Java Files</p>
+<ul>
+<li>A major change in this version is that we don't need to compile the Java source files with javac explicitly anymore:</li>
+</ul>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">$</span><span class="w"> </span><span class="n">javac</span><span class="w"> </span><span class="n">HelloWorld</span><span class="p">.</span><span class="na">java</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">$</span><span class="w"> </span><span class="n">java</span><span class="w"> </span><span class="n">HelloWorld</span><span class="w"> </span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">Hello</span><span class="w"> </span><span class="n">Java</span><span class="w"> </span><span class="mi">8</span><span class="o">!</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="err">###</span><span class="w"> </span><span class="k">new</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="n">$</span><span class="w"> </span><span class="n">java</span><span class="w"> </span><span class="n">HelloWorld</span><span class="p">.</span><span class="na">java</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="n">Hello</span><span class="w"> </span><span class="n">Java</span><span class="w"> </span><span class="mi">11</span><span class="o">!</span>
+</span></code></pre></div>
+</li>
+</ul>
+<h4 id="java-17">Java 17</h4>
+<ul class="task-list">
+<li class="task-list-item">
+<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <ins class="critic">Type (classes) Record</ins> (Introduits en Java 16 (finalisés dans Java 17) )</p>
+<ul>
+<li>Un record permet de créer facilement des objets immutables</li>
+<li>Simplifient la création de classes immuables et de DTO.</li>
+<li>Une "record class”" = un type spécial de classe conçu pour contenir des données immuables avec moins de code</li>
+</ul>
+</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <ins class="critic">Pattern matching</ins> Extraire directement des valeurs typées sans cast explicite,</p>
+<ul>
+<li>Cette fonctionnalité concerne le mot-clé <ins>instanceof</ins>, qui permet de vérifier le type d'un objet.</li>
+<li>Avec la nouvelle syntaxe, l'objet est créé <ins>au moment de l'appel à instanceof</ins> <mark>(Plus besoin de cast manuel)</mark>
+   et il est possible de faire directement appel à ses propriétés par la suite, sans avoir à passer par un objet temporaire.</li>
+</ul>
+</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <ins class="critic">Nouveau Switch</ins></p>
+<ul>
+<li>Il est possible de retourner une valeur grâce à un switch, pas besoin de <code>break</code></li>
+</ul>
+</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <ins class="critic">G1 + ZGC</ins> améliorés</p>
+<ul>
+<li><code>G1</code> <ins>est devenu plus stable</ins> <mark>avec une meilleure gestion des pauses</mark>, il garde des pauses courtes.</li>
+<li><code>ZGC</code> <mark>minimise les pauses même si elle utilise beaucoup de mémoire (heap)</mark><blockquote>
+<p>java -XX:+UseG1GC -jar app.jar</p>
+<p>java -XX:+UseZGC -jar app.jar</p>
+</blockquote>
+</li>
+<li>Java propose plusieurs garbage collectors pour s’adapter à différents besoins :<ul>
+<li>G1 est conçu pour <ins>un équilibre entre performance et pauses courtes</ins></li>
+<li>ZGC garbage collector concurrent, éviter que l’application 
+  s’arrête longtemps pour le GC, même si elle utilise beaucoup de mémoire,
+  il peut gérer des heaps très grands</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Sealed classes (Présentes dès Java 17 (finalisées en 21).)</p>
+<ul>
+<li>Permettent de restreindre quelles classes peuvent hériter d’une classe mère</li>
+</ul>
+</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Blocs de texte</p>
+<ul>
+<li>Il est possible de créer des blocs de texte de façon simple.</li>
+</ul>
+</li>
+</ul>
+<h4 id="java-21">Java 21</h4>
+<ul class="task-list">
+<li class="task-list-item">
+<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <ins class="critic">Record Pattern</ins> (JEP 440)</p>
+<ul>
+<li><strong>Lire / extraire les données d’un record</strong> <mark>(Une syntaxe de déstructuration)</mark></li>
+<li>Précédemment (Java 19) en phase de preview, cette fonctionnalité est désormais officielle</li>
+<li><ins>Utilise le Pattern matching (instanceof / switch)</ins></li>
+</ul>
+</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <ins class="critic">Pattern matching</ins> </p>
+<ul>
+<li>Étendu aux switch</li>
+<li>Le switch est entièrement modernisé, il gère les types, les patterns,
+   les guards <ins>when</ins>, les valeurs null, et les record patterns.<ul>
+<li>les guards <ins>when</ins> on peut ajouter une condition (guard clause)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <ins class="critic">Threads Virtuels</ins></p>
+<ul>
+<li>Les <code>threads Java</code> étaient liés à <strong>un thread système</strong> → lourds et coûteux à créer</li>
+<li>Avec <code>Virtual Threads</code>, Java crée des milliers (voire millions) de threads légers <strong>gérés par la JVM</strong></li>
+<li>
+<p>Un <code>Virtual Threads</code> est <mark>un thread léger <strong>géré par la JVM</strong></mark>, beaucoup plus léger qu’un thread classique.</p>
+<ul>
+<li>Un thread classique est un fil d’exécution lourd <strong>géré par le système d’exploitation</strong>, limité en nombre. </li>
+</ul>
+</li>
+<li>
+<p>Virtual Threads utilisent une pile beaucoup plus petite 
+   et la <ins>JVM partage l’exécution de plusieurs virtual threads sur les threads OS disponibles.</ins></p>
+<blockquote>
+<p>Exemple</p>
+<p>Imagine un <code>thread OS comme un serveur</code> et les <code>virtual threads comme des clients</code> :</p>
+<p>Le <code>serveur</code> peut servir des milliers de <code>clients</code> en partageant son temps de manière efficace.</p>
+</blockquote>
+</li>
+<li>
+<p>Depuis sa version 19, Java a introduit le projet Loom, et avec lui, la promesse d'une <ins>programmation asynchrone non bloquante</ins>, tout en restant dans un paradigme impératif.</p>
+</li>
+<li>Contrairement au <ins>Thread Plateforme</ins> qui est <ins>associé à un unique Thread de l'OS</ins> 
+   <mark>Un Thread Virtuel</mark> <ins>n'est associé à aucun Thread</ins>. <br/> 
+   Au moment de son exécution, la <strong>JVM</strong> va choisir un Thread porteur <ins>Carrier Thread</ins> et y affecter le Runnable.<br/> 
+   Lorsque le code fait une opération bloquante, il va être détaché du Thread porteur (Yield) et son état va être stocké en RAM.<br/> 
+   Le thread porteur est alors libre d'exécuter le code d'un autre Thread virtuel (via une Continuation).</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p>Thread plateforme = thread classique : c’est un fil d’exécution «lourd» géré par le système d’exploitation. </p>
+<ul>
+<li>Chaque thread plateforme correspond à un thread OS, avec toute la surcharge associée (pile mémoire, contexte, planification…).</li>
+<li>Leur nombre est limité par le système.</li>
+</ul>
+</li>
+<li>
+<p>Virtual thread = thread léger géré par la JVM. </p>
+<ul>
+<li>Ils ne correspondent pas directement à un thread OS, mais sont multiplexés sur des threads plateformes existants.</li>
+<li>Cela permet d’en créer des milliers voire des millions sans saturer le système.</li>
+<li>JVM partage l’exécution de plusieurs virtual threads sur les threads OS disponibles.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<ul>
+<li>Link: <a href="https://www.sfeir.dev/back/revolutionnez-votre-programmation-asynchrone-avec-java-21-et-loom/">https://www.sfeir.dev/back/revolutionnez-votre-programmation-asynchrone-avec-java-21-et-loom/</a></li>
+</ul>
+</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <ins class="critic">G1 et ZGC</ins> encore plus performants (moins de pause, plus de stabilité)</p>
+</li>
+</ul>
+</div>
+<h3 id="stream-les-bonnes-pratiques">Stream | les bonnes pratiques</h3>
+<div class="admonition note annotate">
+<p class="admonition-title">TODO - Stream les bonnes pratiques</p>
+<ul>
+<li>L'API Stream : est un pipeline qui permet de traiter <strong>des collections</strong> de données de manière déclarative</li>
+<li>Immuables → chaque opération retourne un nouveau Stream.</li>
+<li>Opérations terminales (déclenchent l’exécution)<ul>
+<li>forEach()</li>
+<li>collect()</li>
+<li>reduce()</li>
+<li>count()</li>
+</ul>
+</li>
+</ul>
+</div>
+<h3 id="interface-fonctionnelle_1">Interface fonctionnelle</h3>
+<div class="admonition note annotate">
+<p class="admonition-title">TODO Interface fonctionnelle</p>
+<ul>
+<li>4 interfaces fonctionnelles principales sont introduites :<ul>
+<li>Predicate</li>
+<li>Consumer</li>
+<li>Supplier</li>
+<li>Function</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="admonition note annotate"></div>
+<div class="admonition note annotate"></div>
+<div class="admonition note annotate"></div>
+<div class="admonition note annotate"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
+        
+          
+          <a href="../oop/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: OOP">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Précédent
+              </span>
+              <div class="md-ellipsis">
+                OOP
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../patterns/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Patterns">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Suivant
+              </span>
+              <div class="md-ellipsis">
+                Patterns
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["toc.integrate", "navigation.tabs", "navigation.footer", "navigation.expand", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../assets/js/extra.js"></script>
+      
+    
+  </body>
+</html>

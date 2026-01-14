@@ -1,0 +1,1452 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Samir Romdhani">
+      
+      
+        <link rel="canonical" href="https://romdhanisam.github.io/rev/en/arch/">
+      
+      
+        <link rel="prev" href="../angular/">
+      
+      
+        <link rel="next" href="../devops/">
+      
+      
+        
+          <link rel="alternate" href="../../arch/" hreflang="fr">
+        
+          <link rel="alternate" href="./" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/materialformkdocs.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Architecture - Wording</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M22%2012a10%2010%200%200%201-10%2010A10%2010%200%200%201%202%2012%2010%2010%200%200%201%2012%202a10%2010%200%200%201%2010%2010M6%2013h8l-3.5%203.5%201.42%201.42L17.84%2012l-5.92-5.92L10.5%207.5%2014%2011H6z%22/%3E%3C/svg%3E');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/css/extra.css">
+    
+      <link rel="stylesheet" href="../../assets/css/neoteroi-cards.css">
+    
+      <link rel="stylesheet" href="../../assets/css/neoteroi-mkdocs.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#architecture-distribuee" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../" title="Wording" class="md-header__button md-logo" aria-label="Wording" data-md-component="logo">
+      
+  <div class="social-icons">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/materialformkdocs.svg" alt="Profile" class="custom-icon" />
+  </div>
+
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Wording
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Architecture
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../arch/" hreflang="fr" class="md-select__link">
+              Français
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/romdhanisam/rev/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    romdhanisam/rev
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link">
+        
+  
+  
+    
+  
+  About
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../oop/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  OOP
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../java/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Java
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../patterns/" class="md-tabs__link">
+          
+  
+  
+  Design - Pattern
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../spring/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Spring
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../bdd/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  BDD
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../java-spring-words/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Java-Spring-BDD
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../angular/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Angular
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Architecture
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../devops/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  DevOps
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kafka-/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kafka-
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../" title="Wording" class="md-nav__button md-logo" aria-label="Wording" data-md-component="logo">
+      
+  <div class="social-icons">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/materialformkdocs.svg" alt="Profile" class="custom-icon" />
+  </div>
+
+
+    </a>
+    Wording
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/romdhanisam/rev/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    romdhanisam/rev
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--done"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../oop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OOP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Java
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Design - Pattern
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Design - Pattern
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Patterns
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../patterns_annexe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Patterns annexe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../spring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Spring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bdd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BDD
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java-spring-words/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Java-Spring-BDD
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../angular/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Angular
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#architecture-distribuee" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture distribuée
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Architecture distribuée">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#horizontal-scaling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        horizontal scaling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scale-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        scale-up
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#client-serveur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Client-serveur
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-plusieurs-niveaux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        À plusieurs niveaux
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#soa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SOA
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#microservices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Microservices
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#soa-vs-microservices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SOA vs Microservices
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#le-tracage-distribue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le traçage distribué
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Le traçage distribué">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comment-techniquement-faire-le-tracage-distribue-dans-kafka" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comment techniquement faire le traçage distribué dans Kafka ?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloud-native" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cloud Native
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#servless" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Servless
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../devops/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DevOps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kafka-/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kafka-
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>Architecture</h1>
+
+<h3 id="architecture-distribuee">Architecture distribuée</h3>
+<div class="admonition note annotate">
+<p class="admonition-title">Architecture distribuée</p>
+<ul>
+<li>Un système distribué est un ensemble de programmes informatiques sur plusieurs nœuds de calcul distincts pour atteindre un objectif commun et partagé.</li>
+<li>Il s’appuie dur des noeuds distincts pour communiquer et se synchroniser sur un réseau commun</li>
+<li>
+<p>Les systèmes distribués contribuent souvent à améliorer <strong>la fiabilité et les performances</strong> du système.</p>
+<hr />
+<blockquote>
+<p>Fiabilité </p>
+</blockquote>
+<ul>
+<li>La fiabilité est améliorée en supprimant les points de défaillance centraux.</li>
+<li>Les nœuds d'un système distribué offrent une redondance de sorte que si l'un d'eux tombe en panne, 
+   d'autres nœuds sont prêts à couvrir et à remplacer la panne.</li>
+</ul>
+<hr />
+<blockquote>
+<p>Performances </p>
+</blockquote>
+<ul>
+<li>les performances sont améliorées, car les nœuds peuvent facilement être mis à <mark>l'échelle horizontalement et verticalement</mark>. 
+  Si un système subit une charge importante, des nœuds supplémentaires peuvent être ajoutés pour aider à absorber la charge.</li>
+<li>La capacité d'un nœud individuel peut également être augmentée pour gérer une charge importante.</li>
+</ul>
+<hr />
+<blockquote>
+<h4 id="horizontal-scaling">horizontal scaling</h4>
+</blockquote>
+<ul>
+<li><em>La montée en charge horizontale</em> consiste à ajouter plusieurs instances du même service pour gérer une charge plus importante.</li>
+<li>La mise à l'échelle horizontale peut améliorer <strong>la disponibilité, la fiabilité et la tolérance aux pannes</strong> de nos microservices, 
+  ainsi que le débit et la réactivité globale de notre système.</li>
+<li>Il introduit également une certaine complexité et une certaine surcharge, telles que <strong>la gestion de la configuration</strong>, de <strong>la synchronisation</strong> 
+  et de <strong>la communication des instances de service</strong>, ainsi que la gestion des problèmes potentiels tels que la latence du réseau, 
+  la cohérence des données et <strong>la découverte des services.</strong></li>
+</ul>
+<hr />
+<blockquote>
+<h4 id="scale-up">scale-up</h4>
+</blockquote>
+<ul>
+<li><em>La mise à l'échelle verticale</em>: c'est le processus d'augmenter la capacité d'une seule instance de service pour gérer une charge plus importante.</li>
+<li>La mise à l'échelle verticale peut être plus simple et moins coûteuse que la mise à l'échelle horizontale, car elle ne nécessite pas d'ajouter de serveurs ou de conteneurs</li>
+</ul>
+</li>
+</ul>
+</div>
+<h4 id="types">Types</h4>
+<div class="admonition info annotate">
+<p class="admonition-title">Types de systèmes distribués</p>
+<p>Il existe de nombreux types de systèmes distribués. Les plus courants sont les suivants :</p>
+<ol>
+<li>
+<h5 id="client-serveur"><ins>Client-serveur</ins></h5>
+<ul>
+<li>Une architecture client-serveur se décompose en deux responsabilités principales.</li>
+<li>Le client est responsable de la présentation de l'interface utilisateur, qui se connecte ensuite au serveur via le réseau.</li>
+<li>Le serveur est responsable de la gestion de la logique métier et de la gestion des états.</li>
+</ul>
+</li>
+<li>
+<h5 id="a-plusieurs-niveaux"><ins>À plusieurs niveaux</ins></h5>
+<ul>
+<li>Une architecture à plusieurs niveaux <u>étend l'architecture client-serveur</u>. Dans une architecture à plusieurs niveaux, le serveur est décomposé en nœuds granulaires supplémentaires, qui découplent les responsabilités supplémentaires du serveur principal, comme le traitement et la gestion des données.</li>
+</ul>
+</li>
+<li>
+<h5 id="soa"><ins>SOA</ins></h5>
+<ul>
+<li>L'architecture orientée services (SOA) est <u>un prédécesseur des microservices</u>.</li>
+<li>La principale différence entre SOA et microservices est la portée du nœud</li>
+</ul>
+</li>
+<li>
+<h5 id="microservices"><ins>Microservices</ins></h5>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> L'architecture microservice <mark>décrit une manière de concevoir une application comme une suite de service
+  hautement disponible</mark>, <strong>autonomes</strong> at <mark>faibelement couplées</mark>,
+  <ins>que l'on peut developper, versionner, déployer et scaler indépondement</ins></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <ins>Une approche de développement</ins> qui consiste <ins class="critic"> à décomposer les applications en éléments les plus simples, 
+  indépendants les uns des autres</ins>. Contrairement à une approche monolithique classique,
+  selon laquelle tous les composants forment une entité indissociable.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <ins>Un microservice est une architecture</ins> pour les applications <ins class="critic">qui sépare une application en plusieurs petits services Web autonomes</ins>.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Le concept de base du microservice, c'est une application qui ne fait qu'une chose, mais qui la fait de manière optimale:</li>
+<li><h6>Les microservices désignent à la fois: Une architecture Une approche de développement</h6></li>
+<li><strong>Avantages</strong>:<ul>
+<li>Par rapport aux applications monolithiques, les microservices sont beaucoup 
+  plus faciles à créer, tester, déployer et mettre en jeu<ul>
+<li>Il est facilement <strong>remplaçable</strong> pour offrir une évolutivité à l’application.</li>
+<li>Il est <strong>déployé indépendamment</strong>.</li>
+<li>Son <strong>développement est indépendant</strong>.</li>
+</ul>
+</li>
+<li>Les microservices sont plus robustes et permettent une mise à l'échelle verticale et horizontale plus dynamique.</li>
+<li>Robustes: solides, résistants, etc. : les microservices sont plus résistants aux pannes que les monolithes.</li>
+<li>Une architecture de microservice complète est un réseau interconnecté de services isolés.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</div>
+<h5 id="soa-vs-microservices">SOA vs Microservices</h5>
+<div class="admonition info annotate">
+<p class="admonition-title">SOA vs Microservices</p>
+<ul>
+<li>
+<p>Similitudes:</p>
+<ul>
+<li>Les architectures SOA et microservices, contrairement aux applications monolithiques, <u>fournissent des composants qui sont uniquement responsables d'une tâche particulière.</u></li>
+</ul>
+</li>
+<li>
+<p>Différences:</p>
+<ul>
+<li>La première différence est que lors du développement de microservices, chaque équipe peut développer et déployer des applications indépendamment des autres services. En revanche, lors de l'utilisation de SOA, chaque équipe développant un service <u> doit connaître le mécanisme de communication commun à utiliser pour réaliser le SOA.</u></li>
+<li>La deuxième différence principale entre SOA et microservices est que dans une SOA, <u>le bus de services</u> , utilisé comme <i>couche de communication entre les services</i>, peut potentiellement devenir un point de défaillance unique.</li>
+</ul>
+<p><u>En termes de stockage</u></p>
+<ul>
+<li>une architecture SOA utilise généralement une solution de <u>stockage de données partagée</u> traditionnelle comme un SGBDR.</li>
+<li>Une architecture de microservices, en revanche, a une approche plus flexible qui est souvent déclinée sous le nom de <i>stockage natif de conteneur</i> .
+  C'est-à-dire que vous <u>définissez votre stockage comme un conteneur lui-même, tout comme vos applications.</u></li>
+</ul>
+</li>
+<li>
+<p>Chaque approche a ses avantages et ses inconvénients : l'utilisation d'une solution de données partagées facilite la réutilisation des données entre les applications. D'un autre côté, pour les applications qui s'exécutent indépendamment les unes des autres, une solution de stockage indépendante (comme le stockage de conteneurs) peut être plus facile à démarrer et à maintenir.</p>
+</li>
+</ul>
+</div>
+<div class="admonition info annotate">
+<p class="admonition-title">Les microservices ont-ils un rapport avec les conteneurs Linux ?</p>
+<ul>
+<li>Lorsque les microservices sont stockés dans des conteneurs,
+  il est plus simple de tirer parti du matériel et d'orchestrer les services,
+  notamment les services de stockage, de réseau et de sécurité.
+  <code>Les microservices et les conteneurs constituent la base du développement d'applications cloud-native</code></li>
+</ul>
+</div>
+<h3 id="le-tracage-distribue">Le traçage distribué</h3>
+<div class="admonition note annotate">
+<ul>
+<li>Le traçage distribué est une méthode utilisée pour <strong>profiler</strong> ou <strong>surveiller</strong> le résultat d'une <ins>requête exécutée sur un système distribué</ins>.</li>
+<li>Surveiller un système distribué c-a-d surveiller le résultat d'une requête exécutée dans le système.</li>
+<li><ins>La surveillance d'un système distribué</ins> peut être difficile, car chaque nœud individuel possède son propre flux de journaux et de mesures.</li>
+<li>Pour obtenir une vue précise d'un système distribué, ces mesures de nœuds distincts doivent être regroupées dans une vue globale.<ul>
+<li>Les requêtes adressées aux systèmes distribués n'accèdent généralement pas à l'ensemble des nœuds du système, mais à un ensemble partiel ou à un chemin à travers les nœuds.</li>
+<li>Le traçage distribué met en lumière les chemins couramment utilisés dans un système distribué et permet aux équipes d'analyser et de surveiller ces chemins.</li>
+<li>Le traçage distribué est installé sur chaque nœud du système et permet ensuite aux équipes <strong>d'interroger</strong> le système <strong>pour obtenir des informations</strong> sur <strong>l'état du nœud et les performances des requêtes</strong>.</li>
+</ul>
+</li>
+</ul>
+</div>
+<h4 id="comment-techniquement-faire-le-tracage-distribue-dans-kafka">Comment techniquement faire le traçage distribué dans Kafka ?</h4>
+<div class="admonition note annotate">
+<p class="admonition-title">traçage distribué dans Kafka</p>
+<ul>
+<li>Ajouter des identifiants de trace dans les messages</li>
+<li>Intégration avec un système de traçage <ul>
+<li>Kafka ne fait pas de traçage distribué natif → on utilise des outils de tracing :<ul>
+<li>OpenTelemetry (standard open-source)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Dans Kafka, <strong>le traçage distribué</strong> se fait en ajoutant un <strong>traceId</strong> dans les headers des messages, 
+    en instrumentant producteurs et consommateurs avec un outil comme OpenTelemetry ou Jaeger, 
+    et en collectant tous les <strong>spans</strong> pour reconstruire le chemin complet des messages 
+    dans le système distribué.<ul>
+<li>L’instrumentation des producteurs et consommateurs consiste à créer des spans 
+        et à propager les traceIds dans les headers des messages, pour suivre 
+        le chemin complet d’un message dans Kafka.</li>
+</ul>
+</li>
+</ul>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Producteur<span class="w"> </span>--<span class="o">[</span>traceId<span class="o">]</span>--&gt;<span class="w"> </span>Broker<span class="w"> </span>Kafka<span class="w"> </span>--<span class="o">[</span>traceId<span class="o">]</span>--&gt;<span class="w"> </span>Consommateur<span class="w"> </span>--&gt;<span class="w"> </span>Service<span class="w"> </span>downstream
+</span></code></pre></div>
+</div>
+<h3 id="cloud-native">Cloud Native</h3>
+<div class="admonition note annotate">
+<ul>
+<li>Le Cloud Native décrit une approche de développement logiciel dans laquelle
+  les applications sont dès le début conçues pour une utilisation sur le Cloud.</li>
+<li>L'approche Cloud Native repose sur quatre piliers qui sont liés et interdépendants.<ol>
+<li>Du côté technique, on trouve les <strong>microservices</strong> et les <strong>technologies de conteneurs</strong>
+   qui constituent la base du développement d'applications cloud-native</li>
+<li>Du côté de la stratégie, on trouve les <strong>processus de développement</strong> et la <strong>Continuous Delivery</strong>
+  sont bien établis dans une culture DevOps agile.</li>
+</ol>
+</li>
+<li>Donc les applications Cloud Native sont créées dans le cadre d'une collaboration
+  étroite entre toutes les parties prenantes (les développeurs et les enterprises).</li>
+<li>Dans le but d'une meilleure solution pour les utilisateurs finaux.</li>
+<li>Par exemple, dans un cadre d'un échange constant, l'équipe de développeurs ajoute à un microservice
+  certaines fonctionnalités livrées automatiquement par des processus de Continuous-Delivery</li>
+</ul>
+<p><strong>Mot clés:</strong> PaaS, Openshift</p>
+</div>
+<h3 id="servless">Servless</h3>
+<div class="admonition note annotate">
+<ul>
+<li>Le serverless est un paradigme de conception et de déploiement d'applications pilotées par les événements.
+  dans lequel les ressources informatiques sont fournies sous forme de services par Cloud.
+  cad le matériel et l'infrastructure sont tous gérés par le fournisseur.<br/></li>
+<li>AWS est l'un des acteurs majeurs du serverless.</li>
+</ul>
+<p><strong>Mot clés :</strong> FaaS</p>
+</div>
+<h3 id="api">API</h3>
+<div class="admonition info annotate">
+<p class="admonition-title">API (Application programming Interface)</p>
+<ul>
+<li>Est une interface de programmation. Elle constitue le cadre à travers lequel un développeur peut interagir avec une application.</li>
+<li>Les APIs sont un ensemble de classes, méthodes, fonctions et constantes qui sert d'interface par laquelle un logiciel peut offrir ses services à d'autres logiciels.</li>
+<li>Elles servent concrètement à accéder aux données d'une application
+  et à utiliser ses fonctionnalités.</li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../angular/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Angular">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Angular
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../devops/" class="md-footer__link md-footer__link--next" aria-label="Next: DevOps">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                DevOps
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["toc.integrate", "navigation.tabs", "navigation.footer", "navigation.expand", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../assets/js/extra.js"></script>
+      
+    
+  </body>
+</html>

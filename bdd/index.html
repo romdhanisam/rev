@@ -1,0 +1,1842 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Samir Romdhani">
+      
+      
+        <link rel="canonical" href="https://romdhanisam.github.io/rev/bdd/">
+      
+      
+        <link rel="prev" href="../spring/">
+      
+      
+        <link rel="next" href="../java-spring-words/">
+      
+      
+        
+          <link rel="alternate" href="./" hreflang="fr">
+        
+          <link rel="alternate" href="../en/bdd/" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/materialformkdocs.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>BDD - Wording</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M22%2012a10%2010%200%200%201-10%2010A10%2010%200%200%201%202%2012%2010%2010%200%200%201%2012%202a10%2010%200%200%201%2010%2010M6%2013h8l-3.5%203.5%201.42%201.42L17.84%2012l-5.92-5.92L10.5%207.5%2014%2011H6z%22/%3E%3C/svg%3E');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/css/extra.css">
+    
+      <link rel="stylesheet" href="../assets/css/neoteroi-cards.css">
+    
+      <link rel="stylesheet" href="../assets/css/neoteroi-mkdocs.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#transaction" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href=".." title="Wording" class="md-header__button md-logo" aria-label="Wording" data-md-component="logo">
+      
+  <div class="social-icons">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/materialformkdocs.svg" alt="Profile" class="custom-icon" />
+  </div>
+
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Wording
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              BDD
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Sélectionner la langue">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="fr" class="md-select__link">
+              Français
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../en/bdd/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/romdhanisam/rev/" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    romdhanisam/rev
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  About
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../oop/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  OOP
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../java/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Java
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../patterns/" class="md-tabs__link">
+          
+  
+  
+  Design - Pattern
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../spring/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Spring
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  BDD
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../java-spring-words/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Java-Spring-BDD
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../angular/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Angular
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../arch/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Architecture
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../devops/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  DevOps
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kafka-/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kafka-
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Wording" class="md-nav__button md-logo" aria-label="Wording" data-md-component="logo">
+      
+  <div class="social-icons">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/materialformkdocs.svg" alt="Profile" class="custom-icon" />
+  </div>
+
+
+    </a>
+    Wording
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/romdhanisam/rev/" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    romdhanisam/rev
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--done"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../oop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OOP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Java
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Design - Pattern
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Design - Pattern
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Patterns
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../patterns_annexe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Patterns annexe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../spring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Spring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BDD
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BDD
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#transaction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transaction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#isolation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Isolation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#propagation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Propagation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#niveau-disolation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Niveau d'isolation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Niveau d&#39;isolation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#isolation-anomalies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Isolation | Anomalies
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hibernate-jpa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hibernate | JPA
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hibernate | JPA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hibernate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hibernate
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jpa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        JPA
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hibernate-vs-jpa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hibernate vs JPA
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-jpa-mentionne-la-possibilite-dun-cache-mais-ne-fournit-pas-dimplementation-concrete" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        - JPA mentionne la possibilité d’un cache, mais ne fournit pas d’implémentation concrète.
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="- JPA mentionne la possibilité d’un cache, mais ne fournit pas d’implémentation concrète.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#performances" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performances
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Performances">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hibernate_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hibernate
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connection-pooling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connection pooling
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MySQL
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MySQL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jdbc-sql-dbms-sgbd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        JDBC - SQL - DBMS (SGBD)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimisation-hikaricp-avec-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optimisation HikariCP avec MySQL
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#index-sql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Index SQL
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Questions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java-spring-words/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Java-Spring-BDD
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../angular/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Angular
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../arch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../devops/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DevOps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kafka-/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kafka-
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>BDD</h1>
+
+<h3 id="transaction">Transaction</h3>
+<div class="admonition note annotate">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>Une transaction</strong> est <mark>une séquence d'accès (lectures ou mises à jour)</mark> à la base de données 
+  qui satisfait 4 propriétés : ACID<blockquote>
+<p>Les propriétés ACID (<strong>a</strong>tomicité, <strong>c</strong>ohérence, <strong>i</strong>solation et <strong>d</strong>urabilité)<br/>
+C'est un ensemble de propriétés qui <ins>garantissent qu'une transaction est exécutée de façon <strong>fiable</strong>.</ins></p>
+</blockquote>
+</li>
+</ul>
+</div>
+<div class="admonition note annotate">
+<ol>
+<li><strong>A</strong>tomicité → tout ou rien (la transaction s’exécute entièrement ou est annulée). <ul>
+<li>Toutes les opérations dans une transaction <mark><strong>sont appliquées</strong> ou annulées ensemble</mark>.</li>
+</ul>
+</li>
+<li><strong>C</strong>ohérence → <ul>
+<li>Assure que <mark>la base reste dans un état correct même en cas d’erreur</mark>.</li>
+<li>Elle maintient l’intégrité des données (les règles sont respectées).</li>
+</ul>
+</li>
+<li><strong>I</strong>solation → <ul>
+<li><mark>Pas d’interférence entre transactions</mark>, <ins>les transactions simultanées
+  ne se perturbent pas entre elles</ins></li>
+<li>Toute transaction doit s'exécuter comme si elle était la seule sur le système.</li>
+</ul>
+</li>
+<li><strong>D</strong>urabilité → <ul>
+<li>Une transaction une fois validée (<code>commit</code>), 
+  elle est <mark>définitivement enregistrée</mark>, même en cas de panne.</li>
+</ul>
+</li>
+</ol>
+</div>
+<h3 id="isolation">Isolation</h3>
+<div class="admonition note annotate">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>Le niveau d’isolation</strong> <mark>définit comment une transaction <strong>voit ou impacte</strong> les données modifiées
+  par d’autres transactions concurrentes.</mark></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> L’isolation des transactions <strong>détermine dans quelle mesure les modifications apportées 
+   à une transaction sont visibles dans d'autres transactions</strong> et par d'autres utilisateurs du système.<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Un niveau d'isolation <strong>élevé</strong> signifie que les modifications d'une transaction <strong>ne sont pas visibles</strong></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Un niveau d'isolation <strong>faible</strong> signifie que les modifications d'une transaction 
+   peuvent «se glisser» dans les sélections exécutées dans le cadre d'une autre transaction.</li>
+</ul>
+</li>
+</ul>
+</div>
+<h3 id="propagation">Propagation</h3>
+<div class="admonition note annotate">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>La propagation</strong> définit <mark>comment une méthode transactionnelle <strong>se comporte</strong> 
+   quand elle est appelée à l’intérieur d’une autre transaction.</mark></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> C’est la capacité à maintenir l'intégrité des transactions, lorsque plusieurs transactions 
+  sont exécutées simultanément dans un contexte de transaction unique.</li>
+</ul>
+</div>
+<h3 id="niveau-disolation">Niveau d'isolation</h3>
+<div class="admonition note annotate">
+<p>La norme SQL définit quatre niveaux d'isolation:</p>
+<ul>
+<li><strong>READ_UNCOMMITTED</strong>  →  Dirty read,  Non-repeatable read, Phantom read</li>
+<li><strong>READ_COMMITTED</strong> →  empêche dirty read, mais non-repeatable read possible.</li>
+<li><strong>REPEATABLE_READ</strong>  → empêche dirty read et non-repeatable read, mais phantom read possible.</li>
+<li><strong>SERIALIZABLE</strong> (le plus strict)<ul>
+<li>SERIALIZABLE: empêche les anomalies concurrentes (simule une exécution séquentielle).</li>
+<li>SERIALIZABLE: <strong>Simule une exécution séquentielle des transactions.</strong></li>
+</ul>
+</li>
+<li>Tous, sauf le niveau SERIALIZABLE, sont soumis à des anomalies de données</li>
+<li>Par défaut<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>MySQL</strong> utilise <strong>REPEATABLE READ</strong></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>PostgreSQL</strong>, <strong>H2</strong> et <strong>Oracle</strong> utilisent <strong>READ COMMITTED</strong></li>
+</ul>
+</li>
+</ul>
+</div>
+<h4 id="isolation-anomalies">Isolation | Anomalies</h4>
+<div class="admonition note annotate">
+<p class="admonition-title">Isolation | Anomalies</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>Dirty read</strong> → lorsqu’une transaction <mark>lit une donnée <strong>non validée</strong> par une autre transaction.</mark></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>Non-repeatable read</strong> → se produit lorsqu’une transaction <mark>lit deux fois la même donnée</mark>,<br/>
+    mais <mark>obtient des valeurs différentes entre les deux lectures</mark>, parce qu’une autre transaction l’a modifiée entre-temps.</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>Phantom read</strong> → Lorsqu’une transaction <mark>lit un ensemble de données</mark> <br/>
+    mais le résultat est différent car de nouvelles lignes apparaissent/disparaissent entre-temps.</p>
+</li>
+<li>
+<p><strong>Qu’est-ce qu’un dirty read (lecture sale) ?</strong></p>
+<ul>
+<li>Un dirty read se produit lorsqu’une transaction lit une donnée 
+   qui a été modifiée par une autre transaction non encore validée (non commitée).</li>
+<li>
+<p>Si cette autre transaction fait un rollback, la première transaction aura utilisé une donnée invalide.</p>
+<blockquote>
+<p>Exemple :</p>
+<ol>
+<li>
+<p>T1 modifie le solde d’un compte (solde = 500 → 300), mais ne fait pas encore de commit.</p>
+</li>
+<li>
+<p>T2 lit le solde = 300.</p>
+</li>
+<li>
+<p>T1 fait rollback → le solde réel est toujours 500, mais T2 a pris 
+une mauvaise décision en pensant que c’était 300.</p>
+</li>
+</ol>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Non-repeatable read</strong> (lecture non reproductible)</p>
+<ul>
+<li>Est un phénomène d’anomalie de concurrence qui se produit lorsqu’une transaction lit deux fois la même donnée, 
+  mais obtient des valeurs différentes entre les deux lectures — parce qu’une autre transaction l’a modifiée entre-temps.</li>
+<li>
+<p>Une transaction lit une donnée deux fois, 
+   mais obtient des résultats différents car une autre transaction a modifié/validé cette donnée entre-temps.</p>
+<blockquote>
+<p>Exemple :</p>
+<p>T1 lit le solde d’un compte = 500.</p>
+<p>T2 modifie ce solde à 300 et fait <strong>commit</strong>.</p>
+<p>T1 relit le même compte = 300.</p>
+<p>Résultat : T1 a lu 500 puis 300 pour le même enregistrement, dans la même transaction.</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<h3 id="hibernate-jpa">Hibernate | JPA</h3>
+<h4 id="hibernate">Hibernate</h4>
+<div class="admonition note annotate">
+<p class="admonition-title">Hibernate</p>
+<ul>
+<li>[] Un framework ORM est conçu par Red Hat. </li>
+<li>[] Il a été initialement publié le 23 mai 2007.</li>
+<li>[] Il prend en charge une JVM multiplateforme et est écrit en Java.</li>
+</ul>
+<hr />
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Framework Java qui <mark>automatise le mapping entre objets Java et tables SQL</mark>, et utilise <strong>JDBC</strong> (API java)
+    pour communiquer avec le <strong>SGBD</strong> (logiciel qui stocke et gère les données )</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> La principale caractéristique d'Hibernate est de <mark>mapper les classes Java aux tables de la base de données.</mark></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> L'avantage est clairement de masquer la logique relationnelle aux développeurs,
+  d'interconnecter facilement des objets avec une base de données 'business' existante.<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Quoi qu'il arrive il faut faire un pont entre le monde relationnel de la base de données et le monde objet de Java.</li>
+</ul>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Fonctionnalités clés d'Hibernate :<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Hibernate est une implémentation des directives <strong>JPA</strong>.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Il aide à <mark>mapper les types de données Java aux types de données <strong>SQL</strong>.</mark></li>
+</ul>
+</li>
+</ul>
+</div>
+<h4 id="jpa">JPA</h4>
+<div class="admonition note annotate">
+<p class="admonition-title">JPA</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Il s'agit <ins>d'une spécification Java</ins> qui donne des fonctionnalités et des normes aux outils ORM. </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Un standard pour gérer la persistance dans Java</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Il est utilisé pour examiner, contrôler et stocker (gérer) les données entre les objets Java 
+    et les bases de données relationnelles.</li>
+</ul>
+</div>
+<h4 id="hibernate-vs-jpa">Hibernate vs JPA</h4>
+<div class="admonition note annotate">
+<p class="admonition-title">Différence entre JPA et Hibernate </p>
+<ul>
+<li>La principale différence entre Hibernate et JPA est que<ul>
+<li>Hibernate est un framework.</li>
+<li>JPA est une spécification d'API.</li>
+<li>Hibernate est une implémentation du JPA.</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>JPA</th>
+<th style="text-align: center;">Hibernate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>JPA est décrit dans le package <strong>javax.persistence</strong>.</td>
+<td style="text-align: center;">Hibernate est décrit dans le package <strong>org.hibernate</strong>.</td>
+</tr>
+<tr>
+<td>Il utilise (<strong>JPQL</strong>) pour exécuter des opérations de base de données.</td>
+<td style="text-align: center;">Il utilise (<strong>HQL</strong>) pour exécuter des opérations de base de données.</td>
+</tr>
+<tr>
+<td>il utilise l' interface <strong>EntityManagerFactory</strong> . Ainsi, cela donne un gestionnaire d'entité.</td>
+<td style="text-align: center;">Pour créer des instances de Session, il utilise l' interface <strong>SessionFactory</strong> .</td>
+</tr>
+<tr>
+<td>Pour créer, lire et supprimer des actions pour les instances de classes d'entités mappées, il utilise l' interface <strong>EntityManager</strong></td>
+<td style="text-align: center;">Pour créer, lire et supprimer des actions pour les instances de classes d'entités mappées, il utilise l' interface <strong>Session</strong> . <em>Il agit comme une interface d'exécution entre une application Java et Hibernate.</em></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition note annotate">
+<p class="admonition-title">Quelle est la différence entre Session et EntityManager ?</p>
+<ul>
+<li><strong>EntityManager</strong> est l’interface standard JPA.</li>
+<li><strong>Session</strong> est spécifique à Hibernate, avec plus de fonctionnalités.</li>
+<li>Dans Spring, <strong>EntityManager</strong> est souvent encapsulé dans un <strong>JpaRepository</strong>. </li>
+</ul>
+</div>
+<div class="admonition note annotate">
+<p class="admonition-title">Cache d'entités vs Cache de requêtes</p>
+<ul>
+<li>Cache d’entités (1er ou second niveau) -&gt; Stockage : Objets Hibernate (entités)</li>
+<li>Cache de requêtes -&gt; Stockage : Résultat d’une requête (liste d'objets)</li>
+</ul>
+</div>
+<div class="admonition note annotate">
+<p class="admonition-title">Le cache d'entités JPA </p>
+<h2 id="-jpa-mentionne-la-possibilite-dun-cache-mais-ne-fournit-pas-dimplementation-concrete">- JPA mentionne la possibilité d’un cache, mais ne fournit pas d’implémentation concrète.</h2>
+<ol>
+<li><strong>Cache de premier niveau (L1)</strong> Le cache de premier niveau est rattaché à l'objet <strong>EntityManager</strong>, 
+   il s'agit en fait du « persistence context » qui lui est associé.</li>
+<li><strong>Cache de deuxième niveau (L2)</strong> En dessous de ce cache placé sous la direction des <code>EntityManagers</code>
+   se trouve un autre cache dit de second niveau. <ins>Ce cache est global à la JVM</ins> 
+   ou ^^plus exactement à l'<strong>EntityManagerFactory</strong>.
+   Il peut aussi être configuré au niveau cluster, dans ce cas le cache sera répliqué sur chaque JVM.</li>
+</ol>
+<hr />
+<ul>
+<li>Le cache de premier niveau (au niveau du persistence context / <strong>EntityManager</strong>) est obligatoire et toujours actif.</li>
+<li>1er niveau<ul>
+<li>Par <code>Session</code> ou <code>EntityManager</code><ul>
+<li>Toujours actif, stocke les entités chargées pendant la transaction.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Le cache de second niveau (partagé entre sessions) est optionnel et dépend de l’implémentation de JPA utilisée.</p>
+</li>
+<li>
+<p>2e niveau</p>
+<ul>
+<li>Partagé entre sessions <code>SessionFactory</code><ul>
+<li>Permet de réutiliser les entités déjà lues depuis la base sans requête SQL.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="https://www.docdoku.com/blog/2010/01/22/le-cache-dentites-jpa/">https://www.docdoku.com/blog/2010/01/22/le-cache-dentites-jpa/</a></p>
+</div>
+<h4 id="performances">Performances</h4>
+<h5 id="hibernate_1">Hibernate</h5>
+<div class="admonition note annotate">
+<p class="admonition-title">Comment optimiser les performances avec Hibernate ?</p>
+<ol>
+<li><strong>Optimisation du cache</strong><ul>
+<li>Premier niveau (obligatoire, session) déjà utilisé par défaut par Hibernate.<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <mark>Le cache de premier niveau est propre à la <strong>session</strong></mark> et disparaît à sa fermeture. </li>
+<li>Hibernate garde les entités dans le cache de <code>session</code> (<code>transactionnel</code>).</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <mark>Le cache de premier niveau permet d'éviter les accès répétés à la même entité dans la même session</mark></li>
+</ul>
+</li>
+<li>Deuxième niveau (optionnel)<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Active <mark>un cache partagé entre sessions</mark></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Le cache de second niveau <mark>fournit une mémoire partagée pour les entités et collections <strong>entre sessions</strong></mark>,<ul>
+<li>Permet de <strong>réduire les lectures SQL</strong> </li>
+<li><strong>Éviter des requêtes SQL répétitives</strong> et <strong>améliorant la performance globale</strong>.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>FETCH JOIN</strong> pour améliorer les performances d’Hibernate</p>
+<ul>
+<li>Permet de charger les entités principales et leurs associations en une seule requête SQL, <br/>
+  On évite ainsi le problème classique du N+1, où Hibernate exécute une requête par entité associée</li>
+<li>Sans FETCH JOIN, Hibernate exécute une requête pour les entités principales, 
+   puis une requête par entité associée. <ul>
+<li>Avec FETCH JOIN, tout est chargé d’un coup. Moins de requêtes, donc meilleures performances.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Batch processing</strong> <mark>Traiter en petits lots pour éviter la surcharge</mark></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Déf1: <ins>Le batch processing</ins>, c’est le fait de traiter les opérations en lots — par exemple 50 insertions à la fois — 
+   pour réduire le nombre d’aller-retours SQL et limiter la consommation mémoire.</li>
+<li>Déf2: <ins>Le batch processing</ins> consiste à regrouper plusieurs opérations sur la base de données (insert, update, delete) 
+  en un seul lot, au lieu d’exécuter une requête par entité.</li>
+<li>Par exemple, avec Hibernate, on peut définir un <code>hibernate.jdbc.batch_size</code> et utiliser <code>flush() / clear()</code> 
+  tous les X enregistrements pour éviter la surcharge mémoire.</li>
+<li>J’ai déjà utilisé cette approche pour importer des milliers d’enregistrements sans saturer la JVM.</li>
+<li>Objectif :<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Éviter l’OutOfMemoryError (ne pas tout charger en mémoire)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Améliorer la performance et le débit global du traitement</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Réduire la charge sur la base de données et le réseau</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Pagination</strong>: <mark>Lire les données par pages</mark></p>
+<ul>
+<li>La pagination consiste à récupérer les données d’une base par pages</li>
+<li>Objectif :<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Limiter le nombre de lignes renvoyées par une requête SQL</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Indexation</strong><ul>
+<li>Créer des index sur les colonnes fréquemment filtrées ou triées.</li>
+</ul>
+</li>
+<li><strong>Projection</strong><ul>
+<li>Projection classique (liste d'objets Object[])</li>
+<li>Projection vers un DTO (meilleure pratique)</li>
+<li>Objectif :<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Seule la data nécessaire est chargée → économie mémoire</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Evite la surcharge du cache Hibernate<ul>
+<li>Les DTO ne vont pas dans le cache de premier ou second niveau, 
+  car ils ne sont pas des entités gérées par Hibernate.</li>
+<li>=&gt; le cache reste léger, seule la mémoire nécessaire pour les DTO est utilisée.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</div>
+<h5 id="connection-pooling">Connection pooling</h5>
+<ul>
+<li>En plus d'optimiser le lazy loading, les fetch joins, et le cache, <br/>
+    utiliser un connection pool (HikariCP…) permet de <mark>réduire le coût de création des connexions</mark>
+    et améliorer la performance globale de l’application</li>
+</ul>
+<div class="admonition note annotate">
+<p class="admonition-title">Connection pooling</p>
+<ul>
+<li>C'est une optimisation côté infrastructure et gestion des connexions à la base de données</li>
+<li>Hibernate ne gère pas directement les connexions, 
+  il s’appuie sur un <code>DataSource</code> ou <code>un pool de connexions</code> (HikariCP.. ).</li>
+<li>Cela complète les optimisations Hibernate: même si tes requêtes sont optimisées,
+  sans pool, chaque appel ouvre/ferme une connexion → perte de performance.</li>
+<li><em>Principe :</em><ul>
+<li>Établir une connexion à une base de données est une opération coûteuse (temps + ressources).</li>
+<li>Au lieu de créer et fermer une connexion à chaque requête, on met en place <mark>un pool (réservoir)</mark> 
+    de connexions déjà ouvertes et prêtes à l’emploi.</li>
+<li>Dans Spring Boot, l’outil <strong>HikariCP</strong> est une implémentation performante très utilisée.</li>
+</ul>
+</li>
+<li><em>But</em> :<ul>
+<li>Diminuer le temps de réponse et la charge serveur.</li>
+</ul>
+</li>
+<li><em>Fonctionnement :</em><ul>
+<li><mark>Lorsqu’une application a besoin d’accéder à la BDD,
+    elle emprunte une connexion disponible dans le pool</mark></li>
+<li>Une fois la requête terminée, la connexion n’est pas détruite, mais rendue au pool pour être réutilisée.</li>
+<li>Le pool peut gérer un nombre maximum de connexions pour éviter la surcharge.</li>
+</ul>
+</li>
+</ul>
+</div>
+<h3 id="mysql">MySQL</h3>
+<h4 id="jdbc-sql-dbms-sgbd">JDBC - SQL - DBMS (SGBD)</h4>
+<div class="admonition note annotate">
+<p class="admonition-title">Hibernate - JDBC - SQL - DBMS (SGBD)</p>
+<ul>
+<li><strong>SGBD</strong> (Système de Gestion de Base de Données) ou <strong>DBMS</strong> (Database Management System)<ul>
+<li>Le SGBD est le <mark>logiciel qui stocke et gère les données</mark>
+  (gère physiquement les données) et exécute les requêtes SQL (un logiciel comme MySQL ou PostgreSQL).</li>
+<li>Un <ins>SGBD</ins> doit avoir un modèle qui définit la manière dont les données sont organisées. </li>
+</ul>
+</li>
+<li><strong>SQL</strong><ul>
+<li>Une <mark>API standard</mark> pour les bases de données relationnelles.</li>
+<li>Il s’agit d’un langage de programmation standardisé utilisé pour gérer les bases de données.</li>
+</ul>
+</li>
+<li><strong>JDBC</strong> (Java Database Connectivity)<ul>
+<li><mark>API Java</mark> qui permet à une application Java de se connecter à un SGBD et d’exécuter des requêtes SQL.<ul>
+<li>Une API Java pour envoyer du SQL au SGBD.</li>
+</ul>
+</li>
+<li>Par rapport Hibernate <ul>
+<li>C'est une API Java bas niveau pour interagir directement avec une base de données via des requêtes SQL.</li>
+<li>Le développeur écrit le SQL et gère manuellement les connexions, transactions et mappages.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Hibernate</strong> (ORM)<ul>
+<li><mark>Framework Java</mark> qui automatise le mapping entre objets Java et tables SQL, 
+   et utilise JDBC (API java) pour communiquer avec le SGBD (logiciel qui stocke et gère les données )</li>
+</ul>
+</li>
+</ul>
+<div class="admonition note annotate">
+<ul>
+<li><strong>ORM</strong> signifie <strong>O</strong>bject-<strong>R</strong>elational <strong>M</strong>apping (ou mappage objet-relationnel).<ul>
+<li>C’est <mark>une technique de programmation</mark> qui permet de convertir les données 
+  entre une base de données relationnelle et un langage de programmation orienté objet, comme Java.</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<h4 id="optimisation-hikaricp-avec-mysql">Optimisation HikariCP avec MySQL</h4>
+<div class="admonition note annotate">
+<p class="admonition-title">Performances… Optimisation HikariCP avec MySQL</p>
+<ul>
+<li>
+<p><ins>Optimisation de la configuration de HikariCP</ins></p>
+<ul>
+<li>De nombreux paramètres de configuration de <code>HikariCP</code> peuvent impacter les performances globales du buffer, 
+  notamment ceux liés à la gestion des connexions et au cache.</li>
+<li>Augmenter le nombre maximum de connexions dans le pool de HikariCP permet de mieux gérer les demandes simultanées</li>
+</ul>
+</li>
+<li>
+<p><ins>Optimisation de la base de données (MySQL)</ins></p>
+<ul>
+<li>Certaines configurations au niveau de la base de données peuvent aussi améliorer les performances 
+  de HikariCP` en réduisant les zones de ralentissement au niveau de la gestion des connexions.</li>
+<li>Augmenter la taille du pool de mémoire pour stocker plus de données en mémoire et réduire les accès disques, 
+  ce qui peut accélérer les requêtes et la gestion des connexions.</li>
+</ul>
+</li>
+<li>
+<p><ins>Utilisation des caches</ins></p>
+<ul>
+<li>Cache de requêtes : désactiver le cache de requêtes dans MySQL peut améliorer 
+  les performances si vous avez des données en constante évolution, car les caches peuvent 
+  devenir obsolètes rapidement.</li>
+</ul>
+</li>
+<li>
+<p><ins>Optimisation du système</ins></p>
+<ul>
+<li>Mémoire et CPU:<ul>
+<li>Il est essentiel d'avoir suffisamment de mémoire et de ressources CPU pour 
+  supporter un grand nombre de connexions simultanées.</li>
+<li>Augmenter la capacité mémoire sur le serveur permet à HikariCP et 
+  à la base de données de mieux gérer les connexions et les requêtes en cache.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<h4 id="index-sql">Index SQL</h4>
+<div class="admonition note annotate">
+<p class="admonition-title">Index SQL : Qu’est-ce que c’est ? À quoi ça sert ?</p>
+<ul>
+<li>
+<p><ins>Un index SQL</ins> permet de localiser rapidement les données recherchées dans une base de données relationnelle. 
+  (localiser rapidement ce que l’on recherche).</p>
+</li>
+<li>
+<p>Un index SQL est <mark>une structure de données</mark> qui <ins>accélère l’accès aux informations</ins> dans une base de données relationnelle.</p>
+</li>
+<li>Sur le plan technique, <ins>c’est une table supplémentaire</ins> associée à la table principale dans la base de données. 
+  Elle contient une ou plusieurs colonnes de la table principale, triées de manière spécifique.</li>
+</ul>
+</div>
+<div class="admonition note annotate">
+<p class="admonition-title">Procédures stockées</p>
+<ul>
+<li>Les procédures stockées sont un ensemble d'instructions SQL compilées résidant dans la base de données</li>
+</ul>
+</div>
+<h4 id="questions">Questions</h4>
+<p><a href="https://www.mygreatlearning.com/blog/hibernate-interview-questions">https://www.mygreatlearning.com/blog/hibernate-interview-questions</a></p>
+<div class="admonition note annotate"></div>
+<div class="admonition note annotate">
+<p class="admonition-title">À quoi sert l’interface Transaction dans Hibernate</p>
+<ul>
+<li><ins>L’interface Transaction dans Hibernate</ins> permet de gérer un ensemble d’opérations sur la base : 
+  elle permet de démarrer, valider (commit) ou annuler (rollback) </li>
+<li>Hibernate fournit une interface <code>Transaction</code> qui encapsule la communication avec
+  deux types de systèmes transactionnels : les transactions JDBC, et les transactions JTA (Java Transaction API)<ul>
+<li>Transactions JDBC<ul>
+<li>Transaction locale, liée à une connexion JDBC unique</li>
+<li>Hibernate utilise la transaction JDBC sous-jacente pour commit/rollback..</li>
+</ul>
+</li>
+<li>Transactions JTA (Java Transaction API)<ul>
+<li>Transaction globale / distribuée,</li>
+<li>Transactions JTA sont globales et peuvent coordonner plusieurs ressources 
+  avec un commit distribué, garantissant la cohérence dans des environnements complexes.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="admonition note annotate">
+<p class="admonition-title">Transaction - Hibernate VS Spring</p>
+<ul>
+<li><strong>Les transactions Hibernate</strong> sont gérées manuellement via l’interface Transaction 
+    pour contrôler commit et rollback.<ul>
+<li>Avec Hibernate, tu travailles avec <code>Session</code> et <code>Transaction</code>, et Hibernate 
+  se charge de déléguer correctement le commit ou rollback au JDBC sous-jacent.</li>
+</ul>
+</li>
+<li>
+<p><strong>Avec Spring</strong>, <code>@Transactional</code> permet de gérer automatiquement les transactions, 
+  avec en plus la propagation, l’isolation et le rollback sur exception, 
+  et ce de façon indépendante de la technologie sous-jacente (JPA, Hibernate, JDBC…).</p>
+</li>
+<li>
+<p><strong>Particularités</strong></p>
+<ul>
+<li><strong>Propagation dans Hibernate</strong><ul>
+<li>Hibernate n’a pas de mécanisme de propagation intégré comme Spring.</li>
+<li>La <code>propagation</code> se fait manuellement via la même Session et Transaction.</li>
+<li>Dans Hibernate, la propagation des transactions doit être gérée manuellement : 
+  plusieurs opérations peuvent partager la même transaction ou créer une transaction 
+  indépendante via une nouvelle session.</li>
+</ul>
+</li>
+<li><strong>Isolation dans Hibernate</strong><ul>
+<li>Hibernate repose sur le SGBD pour gérer l’isolation.</li>
+<li>Dépend du SGBD ou du niveau d’isolation de la connexion JDBC: Hibernate n’impose rien.</li>
+<li>
+<p>L’isolation des transactions dépend du SGBD ou de la configuration JDBC, 
+  car Hibernate utilise les niveaux d’isolation fournis par la base de données.</p>
+<blockquote>
+<p>TRANSACTION_READ_UNCOMMITTED</p>
+<p>TRANSACTION_READ_COMMITTED <mark>(MySQL par défaut)</mark></p>
+<p>TRANSACTION_REPEATABLE_READ</p>
+<p>TRANSACTION_SERIALIZABLE</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
+        
+          
+          <a href="../spring/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Spring">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Précédent
+              </span>
+              <div class="md-ellipsis">
+                Spring
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../java-spring-words/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Java-Spring-BDD">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Suivant
+              </span>
+              <div class="md-ellipsis">
+                Java-Spring-BDD
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["toc.integrate", "navigation.tabs", "navigation.footer", "navigation.expand", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../assets/js/extra.js"></script>
+      
+    
+  </body>
+</html>
